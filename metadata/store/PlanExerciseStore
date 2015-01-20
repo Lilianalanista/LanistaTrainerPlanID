@@ -1,0 +1,40 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "PlanExerciseStore",
+        "model": "PlanExercise",
+        "remoteFilter": true,
+        "storeId": "PlanExerciseStore"
+    },
+    "name": "MyJsonStore",
+    "designerId": "07e649a2-9f9b-40ef-b262-72f6799f4954",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyAjaxProxy1",
+            "designerId": "c334b7f7-2cfa-492e-ad6e-3eb05901cf76",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyJsonReader1",
+                    "designerId": "18163bbb-90ca-44b0-be74-d549097ef5af"
+                }
+            ]
+        }
+    ]
+}

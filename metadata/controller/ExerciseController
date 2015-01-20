@@ -1,0 +1,444 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "exerciseController",
+        "designer|userClassName": "ExerciseController",
+        "id": "exerciseController"
+    },
+    "name": "MyController",
+    "designerId": "8b4d234a-7e2a-4c25-9503-9318103bc0eb",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mainStage",
+                "selector": "#mainStage"
+            },
+            "name": "mainStage",
+            "designerId": "b6f24e79-11b2-4084-8315-bef075dba8d9"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "rightCommandPanel",
+                "selector": "#rightCommandPanel"
+            },
+            "name": "rightCommandPanel",
+            "designerId": "085de00c-9391-441d-8674-1c3ddd40a448"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "leftCommandPanel",
+                "selector": "#leftCommandPanel"
+            },
+            "name": "leftCommandPanel",
+            "designerId": "24321289-83ff-45e0-a2e6-267de9b33e8c"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mainViewport",
+                "selector": "mainViewport",
+                "xtype": "mainviewport"
+            },
+            "name": "mainViewport",
+            "designerId": "f56b472d-b444-42ab-9dec-8aaf08b25868"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoCreate": true,
+                "ref": "exercisePanel",
+                "selector": "#exercisePanel",
+                "xtype": "exercisePanel"
+            },
+            "name": "exercisePanel",
+            "designerId": "a3167e6f-4a8e-49e9-8866-75aca76dbd21"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoCreate": true,
+                "ref": "videoWindow",
+                "selector": "#videoWindow",
+                "xtype": "videowindow"
+            },
+            "name": "videoWindow",
+            "designerId": "c97e90c8-556f-4a56-8b2a-f8cbef7025e6"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "lanistaStage",
+                "selector": "#lanistaStage"
+            },
+            "name": "lanistaStage",
+            "designerId": "30395413-3bc6-4dc2-a173-6959ee7c952a"
+        },
+        {
+            "type": "applicationaction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "record",
+                    "exerciseProtocoll",
+                    "callback"
+                ],
+                "fn": "onShowExercisePanel",
+                "implHandler": [
+                    "        var controller = this,",
+                    "            exercisePanel\t= controller.getExercisePanel(),",
+                    "            mainStage\t= controller.getMainStage();",
+                    "",
+                    "        controller.currentPlanExercise = exerciseProtocoll;",
+                    "        controller.record = record;",
+                    "",
+                    "        exercisePanel.down('#exercisePanelHeader').data = record.data;",
+                    "        exercisePanel.down('#exercisePanelContent').items.items[0].data = record.data;",
+                    "        controller.setActiveItemNew();",
+                    "",
+                    "        var currentPlan = LanistaTrainer.app.getController ( 'PlanController' ).plan;",
+                    "        if ( currentPlan ) {",
+                    "            controller.currentPlanExercise.training = controller.currentPlanExercise.training_min;",
+                    "            controller.currentPlanExercise.weight = controller.currentPlanExercise.weight_min;",
+                    "        }",
+                    "",
+                    "        exercisePanel.addCls('md-show');",
+                    "        mainStage.add( exercisePanel );",
+                    "        mainStage.getLayout().setActiveItem(\"exercisePanel\",'1');",
+                    "",
+                    "        exercisePanel.on('hide', function(component) {",
+                    "            component.destroy();",
+                    "        }, controller);",
+                    "",
+                    "        controller.getLeftCommandPanel().items.each(function (item) {",
+                    "            item.hide();",
+                    "        });",
+                    "        controller.getLeftCommandPanel().add(",
+                    "            Ext.create('LanistaTrainer.view.LanistaButton', {",
+                    "                text: Ext.ux.LanguageManager.TranslationArray.CLOSE,",
+                    "                itemId: 'closeExercisePanel',",
+                    "                glyph: '98@Lanista Icons', //b",
+                    "                cls: [",
+                    "                    'lanista-command-button',",
+                    "                    'lanista-command-button-red'",
+                    "                ]",
+                    "            })",
+                    "        );",
+                    "",
+                    "",
+                    "        // *** 2 Show the panel",
+                    "        exercisePanel.show();",
+                    "",
+                    "        //exercisePanel.down('#exercisePanelContent').fireEvent('tabchange', exercisePanel, exercisePanel.down('#exercisePanelContent').setActiveTab(0));",
+                    "        controller.showInfoTabCommands();",
+                    "        LanistaTrainer.app.fireEvent('showExerciseHeaderUpdate');",
+                    "        LanistaTrainer.app.fireEvent('showStage');",
+                    "",
+                    "        // *** 4 Callback",
+                    "        if (callback instanceof Function) callback();",
+                    ""
+                ],
+                "name": "showExercisePanel",
+                "scope": "this"
+            },
+            "name": "onShowExercisePanel",
+            "designerId": "908e3525-a89b-4e99-94c3-daf3dd875dea"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "newCard",
+                    "maintain"
+                ],
+                "fn": "setActiveItemNew",
+                "implHandler": [
+                    "Ext.override(Ext.layout.CardLayout, {",
+                    "    setActiveItem: function(newCard, maintain) {",
+                    "",
+                    "        var me = this,",
+                    "            owner = me.owner,",
+                    "            oldCard = me.activeItem,",
+                    "            rendered = owner.rendered,",
+                    "            newIndex;",
+                    "",
+                    "        newCard = me.parseActiveItem(newCard);",
+                    "        newIndex = owner.items.indexOf(newCard);",
+                    "",
+                    "        // If the card is not a child of the owner, then add it.",
+                    "        // Without doing a layout!",
+                    "        if (newIndex == -1) {",
+                    "            newIndex = owner.items.items.length;",
+                    "            Ext.suspendLayouts();",
+                    "            newCard = owner.add(newCard);",
+                    "            Ext.resumeLayouts();",
+                    "        }",
+                    "",
+                    "        // Is this a valid, different card?",
+                    "        if (newCard && oldCard != newCard) {",
+                    "            // Fire the beforeactivate and beforedeactivate events on the cards",
+                    "            if (newCard.fireEvent('beforeactivate', newCard, oldCard) === false) {",
+                    "                return false;",
+                    "            }",
+                    "            if (oldCard && oldCard.fireEvent('beforedeactivate', oldCard, newCard) === false) {",
+                    "                return false;",
+                    "            }",
+                    "",
+                    "            if (rendered) {",
+                    "                Ext.suspendLayouts();",
+                    "",
+                    "                // If the card has not been rendered yet, now is the time to do so.",
+                    "                if (!newCard.rendered) {",
+                    "                    me.renderItem(newCard, me.getRenderTarget(), owner.items.length);",
+                    "                }",
+                    "",
+                    "                if (oldCard) {",
+                    "                    if (!maintain) {",
+                    "                        if (me.hideInactive) {",
+                    "                            oldCard.hide();",
+                    "                            oldCard.hiddenByLayout = true;",
+                    "                        }",
+                    "                    }",
+                    "",
+                    "                    oldCard.fireEvent('deactivate', oldCard, newCard);",
+                    "                }",
+                    "                // Make sure the new card is shown",
+                    "                if (newCard.hidden) {",
+                    "                    newCard.show();",
+                    "                }",
+                    "",
+                    "                // Layout needs activeItem to be correct, so set it if the show has not been vetoed",
+                    "                if (!newCard.hidden) {",
+                    "                    me.activeItem = newCard;",
+                    "                }",
+                    "                Ext.resumeLayouts(true);",
+                    "            } else {",
+                    "                me.activeItem = newCard;",
+                    "            }",
+                    "",
+                    "            newCard.fireEvent('activate', newCard, oldCard);",
+                    "",
+                    "            return me.activeItem;",
+                    "        }",
+                    "        return false;",
+                    "    }",
+                    "});"
+                ]
+            },
+            "name": "setActiveItemNew",
+            "designerId": "a67d961d-71cc-489d-ae3b-c47ca950d29e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "tabpanel",
+                "designer|targetType": "Ext.tab.Panel",
+                "fn": "onTabpanelTabChange",
+                "implHandler": [
+                    "    var controller = this;",
+                    "",
+                    "    controller.getRightCommandPanel().items.each(function (item) {",
+                    "        item.hide();",
+                    "    });",
+                    "    if ( newCard.id == 'info' ) {",
+                    "        controller.showInfoTabCommands();",
+                    "    }"
+                ],
+                "name": "tabchange",
+                "scope": "me"
+            },
+            "name": "onTabpanelTabChange",
+            "designerId": "39a2ac0b-52c7-4565-8147-329b77e75baa"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "showInfoTabCommands",
+                "implHandler": [
+                    "controller = this;",
+                    "",
+                    "controller.getRightCommandPanel().items.each(function (item) {",
+                    "    item.hide();",
+                    "});",
+                    "",
+                    "var videoButton = Ext.create('LanistaTrainer.view.LanistaButton', {",
+                    "    text:  'VIDEO',",
+                    "    itemId: 'videoButton',",
+                    "    glyph: '89@Lanista Icons' //Y",
+                    "",
+                    "});",
+                    "",
+                    "controller.getRightCommandPanel().add(",
+                    "    videoButton",
+                    ");"
+                ]
+            },
+            "name": "showInfoTabCommands",
+            "designerId": "70b1e523-c6fc-4e88-a553-93463f55240e"
+        },
+        {
+            "type": "applicationaction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "callback"
+                ],
+                "fn": "onCloseExercisePanel",
+                "implHandler": [
+                    "var controller = this;",
+                    "",
+                    "controller.getRightCommandPanel().items.each(function (item) {",
+                    "    item.hide();",
+                    "});",
+                    "controller.getLeftCommandPanel().items.each(function (item) {",
+                    "    item.hide();",
+                    "});",
+                    "controller.getExercisePanel().hide();",
+                    "if (callback instanceof Function) callback();",
+                    ""
+                ],
+                "name": "closeExercisePanel",
+                "scope": "this"
+            },
+            "name": "onCloseExercisePanel",
+            "designerId": "4c0e3ace-4b51-4919-8863-3176a549ad60"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "viewport #closeExercisePanel",
+                "designer|targetType": "LanistaButton",
+                "fn": "onCloseExerciseBottonClick",
+                "implHandler": [
+                    "var controller = this;",
+                    "",
+                    "LanistaTrainer.app.fireEvent('closeExercisePanel'  , function() {",
+                    "    //LanistaTrainer.app.setStandardButtons('close' + LanistaTrainer.app.panels[LanistaTrainer.app.panels.length - 1] + 'Button');",
+                    "    //controller.getController(controller.getMainStage().getLayout().getActiveItem().controller.id).showCommands();",
+                    "    //controller.getController(controller.getMainStage().getLayout().getActiveItem().controller.id).setHeader();",
+                    "",
+                    "    LanistaTrainer.app.getController ('PlanController').showCommands();",
+                    "    controller.getMainStage().getLayout().getActiveItem().removeCls ('blured');",
+                    "",
+                    "",
+                    "    /*if (controller.getMainStage().getLayout().getActiveItem().id === 'planPanel'){",
+                    "        var planController = LanistaTrainer.app.getController ('PlanController'),",
+                    "            activeTabPlan = planController.getPlanPanel().down('tabpanel').getActiveTab();",
+                    "",
+                    "        planController.currentDay = activeTabPlan;",
+                    "        activeTabPlan.store.reload();",
+                    "",
+                    "    }*/",
+                    "});"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onCloseExerciseBottonClick",
+            "designerId": "2e149963-df91-486e-80d6-4eacbd1aa9ab"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "viewport #videoButton",
+                "designer|targetType": "LanistaButton",
+                "fn": "onVideoButtonClick",
+                "implHandler": [
+                    "var controller = this,",
+                    "    windowPanel = controller.getVideoWindow(),",
+                    "    //viewPort = LanistaTrainer.app.getController('MainController').getLanistaStage().up('mainViewport'),",
+                    "    viewPort = controller.getLanistaStage().up('mainviewport'),",
+                    "    //viewPort = controller.getMainViewport(),",
+                    "    srcVideo = Ext.ux.ConfigManager.getServer() + Ext.ux.ConfigManager.getRoot() + '/tpmanager/video/video/' + controller.record.data.ext_id + '.mp4';",
+                    "",
+                    "windowPanel.html = '<div class=\"lanista-video\" id=\"video\"> <video autoplay controls loop name=\"media\" class=\"x-media lanista-video-item\" id=\"video_item\"> <source src=' + srcVideo + '> \"Your browser does not support the video tag.\" </video></div>';",
+                    "viewPort.add( windowPanel );",
+                    "viewPort.down('#lanistaCopyRights').setY(viewPort.el.dom.clientHeight - 40);",
+                    "windowPanel.show ();",
+                    "windowPanel.on ( 'hide', function ( component ) {",
+                    "    component.destroy ();",
+                    "});"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "name": "onVideoButtonClick",
+            "designerId": "3729e274-048a-4777-b5a8-d0ec53fcdcd9"
+        }
+    ]
+}

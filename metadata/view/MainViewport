@@ -1,0 +1,472 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "mainviewport",
+        "designer|userClassName": "MainViewport",
+        "id": "mainViewport",
+        "layout": "fit"
+    },
+    "name": "MyViewport",
+    "designerId": "0496ebc0-9936-4e42-bf27-dc55ad43daff",
+    "viewControllerInstanceId": "0846f34e-087e-461e-a578-059596b1b373",
+    "viewModelInstanceId": "121b717e-e242-43d3-9c3b-01fc890465b5",
+    "cn": [
+        {
+            "type": "Ext.Component",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 150,
+                "id": "header",
+                "itemId": "header",
+                "maxHeight": 100,
+                "style": "z-index:1; background-color: rgba(227,227,227,0.7)"
+            },
+            "name": "MyComponent",
+            "configAlternates": {
+                "style": "string"
+            },
+            "designerId": "5f197169-9350-4893-b593-57159d4a62af",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "tpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "tpl",
+                        "implHandler": [
+                            "    <div class=header-I>",
+                            "        <div class=\"header-logo\"> p </div>",
+                            "        <div class=\"header-text-lanista\"> Lanista </div>",
+                            "        <div class=\"header-title\">{title}</div>",
+                            "    </div>        ",
+                            "    <div class=\"header-info\">{info}</div>"
+                        ]
+                    },
+                    "name": "tpl",
+                    "designerId": "eedb403c-9aa1-4004-83cf-4e910c342b43"
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "container|pack": "center",
+                "id": "lanistaStage",
+                "itemId": "lanistaStage",
+                "layout": "hbox",
+                "style": "top:0!important;position: absolute;z-index:1;",
+                "width": 150
+            },
+            "name": "MyContainer",
+            "configAlternates": {
+                "style": "string"
+            },
+            "designerId": "d7fa01d5-d759-4cdd-8147-4c712039908a",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "animCollapse": true,
+                        "border": false,
+                        "cls": "lanista-command-panel",
+                        "collapseDirection": "right",
+                        "collapsed": false,
+                        "container|align": "center",
+                        "container|pack": "center",
+                        "header": false,
+                        "id": "leftCommandPanel",
+                        "itemId": "leftCommandPanel",
+                        "layout": "vbox",
+                        "manageHeight": false,
+                        "style": "margin-top:100px;",
+                        "title": null,
+                        "titleCollapse": true,
+                        "width": 88
+                    },
+                    "name": "MyPanel",
+                    "configAlternates": {
+                        "style": "string"
+                    },
+                    "designerId": "0bc3a631-bbf9-4a08-b1cc-d1fc7c72413a"
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "border": false,
+                        "height": null,
+                        "id": "mainStage",
+                        "itemId": "mainStage",
+                        "layout": "card",
+                        "layout|flex": 1
+                    },
+                    "name": "MyContainer1",
+                    "designerId": "7af20480-c460-45fc-a619-03a96c906b11",
+                    "cn": [
+                        {
+                            "type": "Ext.panel.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "border": false,
+                                "cls": "lanista-plan-panel",
+                                "height": null,
+                                "id": "planPanel",
+                                "itemId": "planPanel",
+                                "title": null,
+                                "width": 400
+                            },
+                            "name": "planPanel1",
+                            "designerId": "a7504347-4db3-4750-ae07-4ab3bbaba13c",
+                            "cn": [
+                                {
+                                    "type": "Ext.panel.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "border": false,
+                                        "cls": "lanista-headerplan-panel",
+                                        "designer|createAlias": null,
+                                        "height": 181,
+                                        "id": "planHeader",
+                                        "itemId": "planHeader",
+                                        "margin": "100 0 0 0",
+                                        "title": null
+                                    },
+                                    "name": "MyPanel2",
+                                    "designerId": "f111f1ab-8aa3-4cea-8948-0c36fea0767f",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.XTemplate",
+                                            "reference": {
+                                                "name": "tpl",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|displayName": "tpl",
+                                                "implHandler": [
+                                                    "<div class=\"plan-header-description\" id=\"planHeaderDescription\">{description}</div>",
+                                                    "<div class=\"plan-header-info\" id=\"planHeaderInfoBu\">",
+                                                    "    <div class=\"plan-createddate-info\">",
+                                                    "        <div class=\"plan-header-attribute\">{[Ext.ux.LanguageManager.TranslationArray.CREATED_AT]}:</div><div class=\"plan-header-value\">{[Ext.Date.format ( values.creation_date, 'd, M Y' )]}</div>",
+                                                    "    </div>",
+                                                    "    <div class=\"plan-created-info\">    ",
+                                                    "        <div class=\"plan-header-attribute\">{[values.bu_name !== \"\" ? Ext.ux.LanguageManager.TranslationArray.PLAN_FROM_GYM : Ext.ux.LanguageManager.TranslationArray.PLAN_FROM_TRAINER]}:</div><div class=\"plan-header-value\" id=\"planHeaderValue\">{creator_name}</div>",
+                                                    "    </div>",
+                                                    "    <div class=\"dashboard-customer-background\" style=\"customer-image\">a</div>",
+                                                    "    <div class=\"plan-header-customer-info\" style=\"background-image: url({[ values.bu_name !== \"\" ? 'http://lanista-training.com/app/' + values.bu_domain + '/logo.png' :  Ext.ux.ConfigManager.getServer() + Ext.ux.ConfigManager.getRoot() + '/tpmanager/img/p/' + values.creator_id + '_photo.jpg']});\"></div>",
+                                                    "    <div class=\"plan-header-email\">{[values.bu_email !== \"\" ? values.bu_email : \"\"]}</div>",
+                                                    "</div>"
+                                                ]
+                                            },
+                                            "name": "tpl",
+                                            "designerId": "d9f5b2c4-a77f-402c-9fba-5c41f7277079"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.tab.Panel",
+                                    "reference": {
+                                        "name": "dockedItems",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "activeTab": 1,
+                                        "border": false,
+                                        "cls": "plan-exercises-panel",
+                                        "dock": "bottom",
+                                        "height": null,
+                                        "id": "exercicesPanel",
+                                        "itemId": "exercicesPanel",
+                                        "title": null
+                                    },
+                                    "name": "MyTabPanel",
+                                    "designerId": "bd80da4e-471e-4791-a7da-d6cd015655f9",
+                                    "cn": [
+                                        {
+                                            "type": "linkedinstance",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "id": "d1",
+                                                "itemId": "d1",
+                                                "preserveScrollOnRefresh": true
+                                            },
+                                            "name": "myview",
+                                            "designerId": "089845fb-c091-432c-bc7b-b095cf8a7ddb",
+                                            "masterInstanceId": "0f1bd479-827f-4399-a359-492a9330fefe",
+                                            "cn": [
+                                                {
+                                                    "type": "processcfgfunction",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|params": [
+                                                            "config"
+                                                        ],
+                                                        "fn": "processD1",
+                                                        "implHandler": [
+                                                            "",
+                                                            "config.title = Ext.ux.LanguageManager.TranslationArray.DAY + ' 1';",
+                                                            "",
+                                                            "return config;"
+                                                        ]
+                                                    },
+                                                    "name": "processD1",
+                                                    "designerId": "c63eef81-e397-46cb-a090-f156dde85bb5"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.panel.Panel",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "hidden": true,
+                                                "id": null,
+                                                "itemId": "plus",
+                                                "title": "+"
+                                            },
+                                            "name": "MyPanel4",
+                                            "designerId": "941d0086-9201-4edb-a5fc-cc73c98966cb",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.tab.Tab",
+                                                    "reference": {
+                                                        "name": "tabConfig",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "name": "TabConfig1",
+                                                    "designerId": "c77f629b-e2eb-4de4-a923-4b44a31e7f97"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onTabpanelTabChange",
+                                                "implHandler": [
+                                                    "//var tapPanelSize = tabPanel.items.getCount(),",
+                                                    "//var   controller = LanistaTrainer.app.getController ('PlanController');",
+                                                    "",
+                                                    "/*if (tabPanel.activeTab.title === '+') {",
+                                                    "    if ( tapPanelSize  < 9 ) {",
+                                                    "        tabPanel.insert( tapPanelSize -1 , {",
+                                                    "            xtype: 'planExercisesList',",
+                                                    "            id: 'd'+(tapPanelSize),",
+                                                    "            title: Ext.ux.LanguageManager.TranslationArray.DAY + ' ' + (tapPanelSize),",
+                                                    "            store: controller.plan.planexercises()",
+                                                    "        });",
+                                                    "        tabPanel.setActiveTab(tabPanel.items.items[tapPanelSize -1]);",
+                                                    "        tabPanel.getActiveTab().getEl().setHeight(tabPanel.getActiveTab().el.dom.clientHeight - 45);",
+                                                    "    }",
+                                                    "}",
+                                                    "else{",
+                                                    "    tabPanel.setActiveTab(newCard);",
+                                                    "    tabPanel.getActiveTab().getEl().setHeight(tabPanel.getActiveTab().el.dom.clientHeight - 45);",
+                                                    "}*/"
+                                                ],
+                                                "name": "tabchange",
+                                                "scope": "me"
+                                            },
+                                            "name": "onTabpanelTabChange",
+                                            "designerId": "51b3975b-dd12-4adc-b75f-7949246c5304"
+                                        },
+                                        {
+                                            "type": "Ext.tab.Bar",
+                                            "reference": {
+                                                "name": "tabBar",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "border": false,
+                                                "plain": true
+                                            },
+                                            "name": "MyTabBar",
+                                            "designerId": "9ac30d10-e1e2-4dec-9d96-e690ba876a73"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "animCollapse": true,
+                        "border": false,
+                        "cls": "lanista-command-panel",
+                        "collapseDirection": "right",
+                        "collapsed": false,
+                        "container|align": "center",
+                        "container|pack": "center",
+                        "header": false,
+                        "id": null,
+                        "itemId": "rightCommandPanel",
+                        "layout": "vbox",
+                        "manageHeight": false,
+                        "style": "margin-top:100px;",
+                        "title": null,
+                        "titleCollapse": true,
+                        "width": 88
+                    },
+                    "name": "MyPanel1",
+                    "configAlternates": {
+                        "style": "string"
+                    },
+                    "designerId": "81e3f72d-cb22-419b-9b2c-d8bf9f6fa29b"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onViewportResize",
+                "implHandler": [
+                    "component.down('#lanistaCopyRights').setY(component.el.dom.clientHeight - 20);",
+                    "",
+                    "if (LanistaTrainer.app.getController('PlanController').getPlanPanel().down ('tabpanel').getActiveTab().el){",
+                    "    if (!Ext.getCmp('mainStage')) return;",
+                    "    LanistaTrainer.app.getController('PlanController').getPlanPanel().down ('tabpanel').getActiveTab().getEl().setHeight(component.el.dom.clientHeight - 240);",
+                    "    LanistaTrainer.app.getController('PlanController').getPlanPanel().down ('tabpanel').getEl().setHeight(component.el.dom.clientHeight - 240);",
+                    "",
+                    "}",
+                    ""
+                ],
+                "name": "resize",
+                "scope": "me"
+            },
+            "name": "onViewportResize",
+            "designerId": "41801eb3-0f37-40ac-94d2-750ad70d749b"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onViewportAfterRender",
+                "implHandler": [
+                    "var el = component.el;",
+                    "",
+                    "    component.down('#lanistaCopyRights').setY(component.el.dom.clientHeight - 20);",
+                    "    if (LanistaTrainer.app.getController('PlanController').getPlanPanel().down ('tabpanel').getActiveTab().el){",
+                    "        if (!Ext.getCmp('mainStage')) return;",
+                    "        LanistaTrainer.app.getController('PlanController').getPlanPanel().down ('tabpanel').getActiveTab().getEl().setHeight(component.el.dom.clientHeight - 240);",
+                    "        LanistaTrainer.app.getController('PlanController').getPlanPanel().down ('tabpanel').getEl().setHeight(component.el.dom.clientHeight - 240);",
+                    "    }",
+                    "",
+                    "    el.on('click',function(e,t) {",
+                    "        if (component.down('#videoWindow'))",
+                    "            component.down('#videoWindow').hide();",
+                    "    },this,{delegate: '.x-mask'});",
+                    ""
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "name": "onViewportAfterRender",
+            "designerId": "e57a87cf-bee3-47eb-ae60-936be1b5c87d"
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": "lanista-copyrights",
+                "designer|createAlias": null,
+                "height": "20px",
+                "id": null,
+                "itemId": "lanistaCopyRights"
+            },
+            "name": "MyContainer2",
+            "designerId": "90c540df-ca01-432f-b751-4ddc9c4615bb",
+            "cn": [
+                {
+                    "type": "Ext.form.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": "lanista-copyrights-text",
+                        "html": "<span>Lanista</span> Trainingssoftware &#169; 2012. All rights reserved.",
+                        "itemId": "strCopyRights",
+                        "text": null
+                    },
+                    "name": "MyLabel",
+                    "designerId": "f91acddb-62ae-4f86-bf51-9e24faebc55a"
+                }
+            ]
+        }
+    ]
+}

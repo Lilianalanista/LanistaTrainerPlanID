@@ -1,0 +1,1794 @@
+@font-face {
+    font-family: "Harabara Bold";
+    src:  url('fonts/lanista/Harabara.ttf') format('truetype'),
+        url('fonts/lanista/Harabara.otf') format('opentype'),
+        url('fonts/lanista/Harabara.woff') format('woff'),
+        url('fonts/lanista/Harabara.eot') format('embedded-opentype');
+}
+
+@font-face {
+    font-family: "Roboto Light";
+    src:  url('fonts/lanista/Roboto-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Roboto Medium";
+    src:  url('fonts/lanista/Roboto-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Roboto Black";
+    src:  url('fonts/lanista/Roboto-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "League Gothic";
+    src:  url('fonts/lanista/League-Gothic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Avenir LT Std";
+    src:  url('fonts/lanista/AvenirLTStd-Roman.woff') format('truetype');
+}
+
+@font-face {
+    font-family: "Avenir LT Light";
+    src:  url('fonts/lanista/AvenirLTLight-Roman.woff') format('truetype');
+}
+
+
+@font-face {
+    font-family: "Lanista Icons";
+    src:  url('fonts/lanista/Lanista-2-0.woff') format('truetype');
+}
+
+@font-face {
+    font-family: "Bebas Neue";
+    src:  url('fonts/lanista/BebasNeue-webfont.woff') format('truetype');
+}
+
+$font-family: 'Roboto Light';
+//@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:900);
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Source Sans Pro Black'), local('SourceSansPro-Black'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGC7eGk4PJkA83J1AXCmgUfc.woff) format('woff');
+}
+
+$list-active-gradient: "none";
+$base-gradient: "none";
+
+.hidden,
+{
+    display: none;
+}
+
+#header {
+    z-index: 2!important;
+}
+
+.header-logo {
+    float: left;
+    font-family: "Lanista Icons"!important;
+    font-size: 50px!important;
+    padding-top: 31px;
+    padding-left: 25px;
+    color: #b2b2b2;
+    letter-spacing: 1px;
+    margin-right: 10px;
+}
+
+.header-I{
+    width: 13%;
+    float: left;
+}
+
+.header-text-lanista{
+    font-family: "Harabara Bold"!important;
+    font-size: 35px;
+    padding-top: 34px;
+    color: darkgray;
+    float: right;
+}
+
+.header-info {
+    float: right;
+    padding-right: 25px;
+    padding-top: 0px!important;
+    font-family: "Avenir LT Std";
+    font-size: 22px;
+    line-height: 21px;
+    text-align: right;
+    width: 45%!important;
+}
+
+.header-title {
+    float: left;
+    padding-top: 31px;
+    font-family: "Roboto Black";
+    text-transform: uppercase;
+    font-size: 25px;
+    line-height: 33px;
+    letter-spacing: -1px;
+    color: rgba(0,0,0,0.2);
+}
+
+
+.lansita-header-customer-logo, .lansita-header-customer-photo {
+    width: 100%!important;
+    height: 100%!important;
+    border-radius: 50%!important;
+    background-size: cover!important;
+    position: relative!important;
+    top: -92px!important;
+}
+
+.lansita-header-customer-logo-not-found {
+    width: 100px;
+    height: 100px;
+    float: right;
+    border-radius: 50%;
+    border-style: solid!important;
+    border-width: 4px!important;
+    border-color: #34acfb;
+    margin-top: 20px;
+    margin-left: 10px;
+    background-color: #34acfb;
+}
+
+.lansita-header-customer-logo-not-found:before {
+    font-family: "Lanista Icons";
+    content: "o";
+    text-align: center;
+    color: white;
+    font-size: 60px;
+    line-height: 92px;
+    display: block;
+}
+
+.lansita-header-customer-image-not-found {
+    width: 100px;
+    height: 100px;
+    float: right;
+    border-radius: 50%;
+    border-style: solid!important;
+    border-width: 4px!important;
+    border-color: #34acfb;
+    margin-top: 20px;
+    margin-left: 10px;
+    background-color: #34acfb;
+}
+
+.lansita-header-customer-image-not-found:before {
+    font-family: "Lanista Icons";
+    content: "j";
+    text-align: center;
+    color: white;
+    font-size: 60px;
+    line-height: 92px;
+    display: block;
+}
+
+.lansita-header-customer-name {
+    margin-top: 35px;
+}
+
+.lansita-header-customer-name .last-name {
+    text-transform: uppercase;
+    font-family: "Roboto Black";
+    letter-spacing: -1px;
+    font-size: 40px;
+    color: #4c4c4c!important;
+}
+
+.lansita-header-customer-name .first-name {
+    font-family: "Avenir LT Light";
+    font-size: 19px;
+    line-height: 20px;
+}
+
+.lanista-guest .header-logo {
+    font-family: "Harabara Bold"!important;
+}
+
+.lanista-guest #bottonPanel .x-btn-glyph {
+    border-width: 2px!important;
+    background-image: -webkit-linear-gradient(#60B0A3,#4786BA)!important;
+}
+
+.lanista-guest #lanistaStage {
+    background-image: url(../resources/images/login-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 200px 43px #424242 inset;
+}
+
+.lanista-guest .lanista-command-panel {
+    top:50px!important;
+}
+
+.x-autocontainer-form-item, .x-anchor-form-item, .x-vbox-form-item, .x-table-form-item {
+    margin-bottom: 0px;
+}
+
+.lanista-form input {
+    border-bottom-width: 0px;
+}
+
+.lanista-form table:first-child input {
+    -moz-border-radius-topleft: 0.4em;
+    -webkit-border-top-left-radius: 0.4em;
+    border-top-left-radius: 0.4em;
+    -moz-border-radius-topright: 0.4em;
+    -webkit-border-top-right-radius: 0.4em;
+    border-top-right-radius: 0.4em;
+}
+
+.lanista-form table:last-child input {
+    -moz-border-radius-bottomleft: 0.4em;
+    -webkit-border-bottom-left-radius: 0.4em;
+    border-bottom-left-radius: 0.4em;
+    -moz-border-radius-bottomright: 0.4em;
+    -webkit-border-bottom-right-radius: 0.4em;
+    border-bottom-right-radius: 0.4em;
+    border-bottom-width: 1px;
+}
+
+
+.fieldset-login .x-fieldset-header-text {
+    font: 22px normal "Roboto Light";
+    color: #15428b;
+    padding: 1px 0;
+}
+
+.x-container .container-group {
+    padding-top: 20%;
+}
+
+.lanista-command-panel, #mainStage {
+    -webkit-transition: opacity 0.5s ease-in-out;
+}
+
+.lanista-command-button {
+    height: 140px!important;
+    margin-left: 7px;
+    padding: 0px!important;
+    color: rgb(74,172,216);
+    background-image: none;
+    background-color: transparent;
+    border: 0;
+    background-color: white!important;
+    background-image: none!important;
+}
+
+.lanista-command-button .x-btn-inner{
+    white-space: inherit;
+}
+
+//Red button
+.lanista-command-button-red .x-btn-inner, .lanista-command-button-red .x-btn-glyph {
+    color: rgb(247, 59, 62)!important;
+}
+
+.lanista-command-button-red .x-btn-glyph {
+    border-color: rgb(247, 59, 62)!important;
+}
+
+//Green button
+.lanista-command-button-green .x-btn-inner, .lanista-command-button-green .x-btn-glyph {
+    color: #59d76e!important;
+}
+
+.lanista-command-button-green .x-btn-glyph {
+    border-color: #59d76e!important;
+}
+
+
+//Violet button
+.lanista-command-button-violet .x-btn-inner, .lanista-command-button-violet .x-btn-glyph {
+    color: #B180BE!important;
+}
+
+.lanista-command-button-violet .x-btn-glyph {
+    border-color: #B180BE!important;
+}
+
+.lanista-command-button .x-btn-button {
+    height: 100px!important;
+    width: 73px!important;
+}
+
+.lanista-command-button .x-btn-glyph {
+    height: 70px!important;
+    width: 70px!important;
+    border-style: solid!important;
+    border-width: 4px!important;
+    border-color: rgb(74,172,216);
+    border-radius: 50%;
+    font-size: 30px;
+    line-height: 60px;
+    color: rgb(74,172,216);
+    opacity:1;
+}
+
+.lanista-command-button .x-btn-inner {
+    line-height: 16px;
+    top: 46px;
+    font-size: 13px;
+    position: relative;
+    width: 70px;
+    display: inline-block!important;
+    margin-right: auto;
+    margin-left: auto;
+    font-weight: initial;
+    margin: 0!important;
+    text-align: center;
+    font-family: Roboto Light;
+    -webkit-font-smoothing: antialiased;
+    color: rgb(74,172,216);
+    padding-left: 0;
+    padding-right: 0;
+    right: 70px;
+    white-space: initial!important;
+}
+
+
+.lanista-command-button .x-btn-arrow {
+    padding-right: 0px;
+}
+
+.lanista-command-button .x-btn-icon-el {
+    margin-top: -22px;
+    margin-left: 2px;
+}
+
+.menu-lanista-button {
+    //text-transform: uppercase;
+    box-shadow: 6px 6px 10px #888888;
+}
+
+.menu-lanista-button .x-menu-item-text{
+    font-size: 12px;
+}
+
+.x-menu .x-menu-icon-separator {
+    background-color: transparent;
+    border-left: transparent;
+}
+
+.x-menu-item-arrow {
+    background-image: transparent!important;
+}
+
+.lanista-command-panel .two-lines .x-btn-inner {
+    white-space: normal;
+    line-height: 11px;
+    top: 40px;
+    height: 32px;
+}
+
+.lanista-guest .x-btn-glyph, .lanista-guest .x-btn-inner {
+    border-color: white;
+    color: white!important;
+}
+
+.lanista-guest .lanista-command-panel .x-btn-glyph {
+    border-color: transparent!important;
+}
+
+.lanista-guest .lanista-command-panel .x-btn-inner {
+    top: 52px;
+}
+
+.lanista-guest .lanista-command-panel .two-lines .x-btn-inner {
+    top: 62px;
+}
+
+.lanista-guest #header {
+    background-color: transparent!important;
+}
+
+//Login Area
+.login-buttons-container .x-btn {
+    background-image: none;
+    background-color: transparent;
+    border: none;
+    overflow: visible;
+}
+
+.login-buttons-container label {
+    font-family: Roboto Light;
+    font-size: 22px;
+    color: rgb(104,104,104);
+}
+
+#infologinButton .x-btn-inner {
+    text-align: left;
+    color: #686868;
+    font-size: 15px;
+    overflow: visible;
+    font-family: 'Roboto Medium';
+    white-space: initial;
+}
+
+#infologinButton .x-btn-inner span {
+    color: #4aacd8;
+}
+
+#infologinButton .x-btn-button {
+    height: 36px!important;
+    width: 100%!important;
+    padding-top: 4%;
+    overflow: visible;
+}
+
+#bottonPanel .x-btn-button {
+    height: 240px!important;
+    width: 152px!important;
+}
+
+#bottonPanel .x-btn-glyph {
+    height: 150px!important;
+    width: 150px!important;
+    font-size: 72px;
+    line-height: 140px;
+    background-color: rgba(255,255,255,0.2);
+}
+
+#bottonPanel  .x-btn-inner {
+    top: 155px!important;
+    font-size: 26px;
+    width: 150px;
+    height: 80px;
+    line-height: 25px;
+    white-space: initial;
+}
+
+#bottonPanel .x-panel-body {
+    padding: 0 20%;
+}
+
+.x-help-panel {
+    background-color: rgba(255,255,255,0.9);
+    width: 1100px !important;
+    height: 450px!important;
+    position: relative;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    top: 200px;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border-radius: 0.3em;
+    -webkit-box-shadow: rgba(0,0,0,0.8) 0 0.2em 0.6em;
+    -moz-box-shadow: rgba(0,0,0,0.8) 0 0.2em 0.6em;
+    box-shadow: rgba(0,0,0,0.8) 0 0.2em 0.6em;
+    background-image: none;
+}
+
+.x-help-panel .x-panel-body {
+    border:0;
+}
+
+.x-help-panel  .x-window-body-default {
+    background-color: transparent;
+}
+
+.item-clicked {
+    cursor: pointer;
+}
+
+.item-not-clicked {
+    cursor: default;
+}
+
+//User Settings
+.lanista-user-fieldset {
+    padding: 25px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    width: 800px!important;
+}
+
+.lanista-user-settings-field {
+    width: 800px!important;
+}
+
+.lanista-user-fieldset .x-fieldset-body {
+    width: 820px!important;
+    margin-left: 23px;
+}
+
+.lanista-user-info-panel .x-fit-panel .x-panel-default {
+    padding-top: 120px!important;
+    top:0px!important;
+}
+
+.lanista-user-info-panel .x-panel-body-default {
+    overflow: auto!important;
+    width: 880px!important;
+    height: 418px;
+    margin-left: auto!important;
+    margin-right: auto!important;
+}
+
+.x-boundlist-item img {
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+//Trainer Settings Header
+.trainer-foto-header, .trainer-logo-header {
+    top: 120px!important;
+    position: relative!important;
+    width: 100px!important;
+    float: right!important;
+    font-size: 19px!important;
+    width: 100px!important;
+    text-align: center!important;
+    color: #34acfb!important;
+    font-family: 'Roboto Black'!important;
+    letter-spacing: -1px!important;
+    text-transform: uppercase!important;
+}
+
+.lanista-user-setup.trainer-logo-header {
+    right: -108px!important;
+}
+
+.lanista-user-setup.trainer-foto-header {
+    right: -200px!important;
+}
+
+.lanista-user-setup.lansita-header-customer-image-not-found {
+    position: relative;
+    right: -90px!important;
+}
+
+//Image Panel
+.lanista-image-panel-settings {
+    padding-left: 320px;
+    padding-top: 180px;
+}
+
+//Customer List
+.customer-list-background {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-family: "Lanista Icons";
+    text-align: center;
+    font-size: 60px;
+    line-height: 92px;
+    background-color: #34acfb;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -100px;
+}
+
+.customer-list-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 1;
+    position: relative;
+    background-size: cover;
+    border-style: solid!important;
+    border-width: 4px!important;
+    border-color: #34acfb;
+}
+
+.customer-item {
+    text-align: center;
+    float: left;
+    width: 205px;
+    height: 190px;
+}
+
+.customer-list-lastname {
+    font-family: "Avenir LT Std";
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size:130%;
+}
+
+.customer-list-firstname {
+    font-size:130%;
+}
+
+.exercises-header, .customer-header {
+    margin-top: 18px!important;
+}
+
+.header-filter {
+    float: left;
+    font-family: "Avenir LT Light";
+    font-size: 15px;
+    margin-top: -10px;
+    //margin-top: -48px;
+    text-align: left;
+    //margin-left: -45px;
+    margin-left: -530px;
+    width: 475px;
+}
+
+.lanista-exercise-filter-plan {
+    margin-left: -457px!important;
+    margin-top: -50px!important;
+}
+
+.filterTitle {
+    width: 30%!important;
+    float: left!important;
+}
+
+.filterTitle span {
+    width: 100%!important;
+    float: left!important;
+    background-color: darkgray;
+    color: #eaeaea;
+    height: 21px;
+    line-height: 23px;
+    text-align: center;
+}
+
+.filterText {
+    width: 66%;
+    float: left!important;
+    background-color: white;
+    height: 21px;
+    line-height: 20px;
+    text-transform: uppercase;
+    border-style: solid;
+    border-color: darkgray;
+    border-width: 1px;
+    text-align: center;
+    font-family: "Roboto Black";
+    border-top: 0;
+    color: gray;
+}
+
+.header-filter > .filterText:first-of-type {
+    border-top: 1px solid #4c4c4c!important;
+}
+
+//Grid Customer Exercises
+.lanista-customerexercises-panel .x-panel-default {
+    width: 230px!important;
+}
+
+.exercise-list-img-right {
+    margin-right: 0px!important;
+    border-radius: 0 3px 3px 0!important;
+    float: right;
+}
+
+.exercise-list-img-left {
+    margin-left: 0px!important;
+    border-radius: 3px 0 0 3px!important;
+    float: left;
+}
+
+.x-grid-view {
+    width:  230px!important;
+}
+
+.x-grid-body {
+    width:  230px!important;
+}
+
+.x-column-header {
+    text-align: center;
+    font-size: 18px;
+    width:  196px!important;
+}
+
+.protocolls-panel .x-box-target {
+    height:  0px;
+}
+
+.protocolls-panel .x-box-target {
+    width:  220px!important;
+}
+
+.x-grid-with-row-lines .x-grid-table {
+    width:  215px!important;
+    height:  0px!important;
+}
+
+.x-grid-group-hd {
+    border-color: transparent!important;
+}
+
+.x-grid-with-row-lines .x-grid-td {
+    font-size: 18px;
+}
+
+.lanista-row-cell {
+    height: 20px;
+    line-height: 16px;
+}
+
+.lanista-grid-row {
+    display: none;
+    border-color: transparent!important;
+}
+
+.lanista-customer-exercise .x-grid-view{
+    background-color: #f4f4f4!important;
+}
+
+.lanista-customer-exercise td{
+    padding-top: 0px;
+}
+
+
+.lanista-customer-exercise td .x-grid-group-hd {
+    border: 1px solid #b9b9b9!important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3)!important;
+    margin-right: 3px;
+    margin-left: 3px;
+    margin-top: 6px;
+    margin-bottom: 3px;
+    border-radius: 3px;
+    overflow: hidden;
+    border: 1px solid #b9b9b9!important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3)!important;
+    padding: 0px 0px 4px 0px;
+    width: 182px!important;
+}
+
+.lanista-customer-exercise td .x-grid-group-hd .x-grid-group-title input{
+    margin-right: -4px;
+}
+
+.lanista-customer-exercise .x-group-hd-container table {
+    border-color: transparent;
+}
+
+//Customer Protocolls
+.lanista-protocolls-weight {
+    font-size: 12px;
+    line-height: 10px;
+    color: #4aacd8;
+    margin-left: 55px;
+}
+
+.lanista-protocolls-weight-p{
+    margin-top: 0px!important;
+    margin-bottom: 0px!important;
+}
+
+.lanista-img-protocolls .img-right .x-border-box * {
+    margin-left: 15px!important;
+}
+
+.lanista-img-protocolls .img-left .x-border-box * {
+    margin-left: -4px!important;
+}
+
+.lanista-grid-customer-exercise-column span{
+    font-size: 17px;
+    color: lightslategray;
+}
+
+//Exercise
+.blured {
+    -webkit-filter: blur(10px);
+    //filter: blur(10px);
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.exercise_name {
+    margin-top: 120px;
+    font-family: Bebas Neue;
+    font-size: 31px;
+    text-transform: uppercase;
+    text-align: right;
+    -webkit-mask-image: -webkit-gradient(linear,left top,left bottom,from(#000),color-stop(50%,rgba(0,0,0,0.7)),to(rgba(0,0,0,0.4)));
+    width: 70%!important;
+    float: right!important;
+}
+
+.exercise-images {
+    height: 625px;
+    width: 250px;
+    position: fixed;
+    top: 130px!important;
+    z-index: 3;
+}
+
+.exercise-image {
+    height: 40%;
+    position: relative;
+    z-index: 2;
+}
+
+.lanista-exercise-panel-content {
+    top: 220px!important;
+}
+
+.lanista-exercise-planpanel{
+    background-color: #f4f4f4!important;
+    padding-top: 15px;
+    height: 430px;
+}
+
+.exercise-description  {
+    margin-left: 325px;
+    font-size: 18px;
+}
+
+.exercise-coaching-key, .exercise-errors {
+    margin-top: 40px;
+}
+
+.exercise-coaching-key span, .exercise-errors span {
+    font-family: 'Roboto Medium';
+    font-size: 20px;
+}
+
+.lanista-tbar-exercise .x-tab-bar-strip-default {
+    border-color: grey;
+    background-color: #34acfb;
+    left: 250px;
+}
+
+.lanista-tbar-exercise .x-tab-default-top-active, .lanista-tbar-exercise .x-tab-default-top, .lanista-tbar-exercise .x-tab-default-top-over {
+    background-image: transparent;
+}
+
+.lanista-exercise-panel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: auto;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.498039);
+}
+
+.md-show {
+    visibility: visible;
+}
+
+.lanista-protocoll {
+    width: 650px;
+    left: 370px;
+    font-size: 17px;
+}
+
+.protocoll-configuration {
+    font-family: "Roboto Medium";
+    font-size: 40px;
+    color: #5c93ce;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.3),0px -1px 0 rgba(0,0,0,0.7);
+    margin-top: 50px;
+    text-align: right;
+    float: right!important;
+}
+
+.lanista-group-grid-exercise {
+    background-color: cornflowerblue;
+    height: 25px;
+    font-size: 14px;
+    padding-top: 7px;
+    color: white;
+}
+
+.lanista-exercises-protocolls-td {
+    font-size: 14px;
+}
+
+#rowProtocolls .x-column-header-inner {
+    background:transparent!important;
+}
+
+//WeightPicker
+.lanista-weightPicker {
+    left: 0px !important;
+    width: 320px !important;
+    top: 0px !important;
+    bottom: 0px !important;
+    z-index: 6 !important;
+    background-color: rgba(255,255,255,0.9);
+    position: absolute;
+}
+
+.numberpad-button {
+    float: left;
+    width: 55px;
+    //height: 55px!important;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+.numberpad {
+    width: 260px;
+    height: 260px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+}
+
+.numberpad-button span {
+    border-style: solid;
+    border-radius: 50%;
+    border-color: #858585;
+    height: 55px!important;
+    line-height: 52px;
+    text-align: center;
+    font-size: 23px;
+    color: #4aacd8;
+    width: 100%;
+}
+
+.lanista-weightPicker .x-btn-default-small, .lanista-trainingPicker .x-btn-default-small {
+    margin-right: auto;
+    margin-left: auto;
+    background-image: none;
+    background-color: transparent;
+    border-width: 2px;
+    border-color: black;
+    margin-top: 7px;
+    width: 260px !important;
+    height: 40px;
+    border-radius: 9px!important;
+    left: 25px;
+    margin-top: 10px;
+}
+
+.lanista-weightPicker input, .lanista-trainingPicker input {
+    text-align: right;
+    font-size: 25px;
+    background-color: #729323;
+    color: #f3ffd5;
+    text-shadow: 0 0 10px #f3ffd5;
+    border-radius: 10px;
+    min-height: 0;
+    width: 100%;
+}
+
+.lanista-weightPicker .x-form-item-body, .lanista-trainingPicker .x-form-item-body {
+    width: 260px!important;
+    top: 5px;
+    left: 26px;
+}
+
+.lanista-font {
+    font-family: 'Lanista-2-0';
+    color: #4aacd8;
+    font-size: 32px;
+}
+
+.weight-option-button {
+    width: 33.33%;
+    height: 42px!important;
+    float: left;
+    text-align: center;
+}
+
+.weight-option-button .x-panel-body-default {
+    height: 42px!important;
+}
+
+.weight-option-button span {
+    font-size: 18px;
+    height: 42px;
+    width: 100%;
+}
+
+.training-helpbuttons {
+    margin-top: 10px;
+}
+
+.lanista-weightPicker .x-btn-wrap, .lanista-trainingPicker .x-btn-wrap {
+    height: 40px!important;
+}
+
+.lanista-weightPicker .x-btn-button {
+    height: 40px!important;
+    width: 250px!important;
+}
+
+.lanista-weightPicker .x-btn-default-small .x-btn-inner, .lanista-trainingPicker .x-btn-default-small .x-btn-inner {
+    height: 40px!important;
+    width: 250px!important;
+    font-size: 19px;
+    line-height: 31px;
+    font-weight: bold;
+}
+
+.weight-option-button .lanista-traininghelp-item {
+    width: 30px;
+    margin-left: 37px;
+}
+
+
+//TrainingPicker
+.lanista-trainingPicker {
+    left: auto!important;
+    right: 0px !important;
+    width: 320px !important;
+    top: 0px !important;
+    bottom: 0px !important;
+    z-index: 10 !important;
+    background-color: rgba(255,255,255,0.9);
+    position: absolute;
+}
+
+.lanista-trainingPicker .x-toolbar-default {
+    height: 53px!important;
+    border-color: transparent;
+    border-width: 1px;
+    background-image: none;
+    background-color: transparent;
+}
+
+.lanista-trainingPicker .lanista-buttongroup-traininghelp {
+    width: 200px!important;
+}
+
+.lanista-trainingPicker .x-box-target {
+    height: 49px!important;
+}
+
+.lanista-training-clear .x-btn-button {
+    height: 40px;
+}
+
+
+.lanista-trainingPicker .x-btn-group-default-framed {
+    border-color: black!important;
+}
+
+.lanista-trainingPicker .x-btn-group-default-framed-notitle {
+    border-radius: 11px!important;
+    background-color: transparent!important;
+    border-width: 2px!important;
+    width: 260px!important;
+    left: 22px!important;
+}
+
+.lanista-toolbar-training .x-btn-default-toolbar-small {
+    width: 87px!important;
+    height: 43px!important;
+    top: 0px!important;
+    left: -2px!important;
+}
+
+.lanista-toolbar-training .x-btn-default-toolbar-small .x-btn-inner {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.button-selected-color {
+    background-color: silver;
+    border-color: black;
+}
+
+.button-unselected-color {
+    background-color: transparent;
+}
+
+.lanista-trainingPicker .lanista-closeProtocollButton {
+    left: 230px!important;
+    width: 80px!important;
+}
+
+.lanista-trainingPicker .lanista-saveProtocollButton {
+    left: 140px!important;
+    width: 80px!important;
+    height: 60px!important;
+    width: 60px!important;
+    font-size: 21px;
+    line-height: 51px;
+}
+
+.lanista-closeProtocollButton .x-btn-glyph, .lanista-saveProtocollButton .x-btn-glyph {
+    height: 58px!important;
+    width: 58px!important;
+    font-size: 21px;
+    line-height: 51px;
+}
+
+.lanista-trainingPicker .x-fieldset {
+    border-color: transparent;
+}
+
+
+//Plan Panel
+.lanista-list-item-selected {
+    box-shadow: 0 0 20px #59d76e;
+}
+
+.lanista-plan-exercise {
+    width: 180px!important;
+    height: 195px!important;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3)!important;
+    border-radius: 3px;
+    margin-left: 20px;
+    float: left;
+}
+
+.plan-header-info {
+    width: 40%;
+    color: #999;
+    font-size: 14px;
+    float: right;
+    font-size: 17px;
+    padding-top: 4px;
+}
+
+.plan-created-info {
+    width: 100%;
+}
+
+.plan-header-description {
+    margin-top: 10px;
+    width: 50%;
+    float: left;
+    color: #999;
+    font-size: 16px;
+    height: 80px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px;
+    border-color: #e6e6e6;
+    font-family: 'Roboto Light';
+}
+
+.plan-header-attribute {
+    width: 50%;
+    float: left;
+}
+
+.plan-header-value {
+    float: right;
+    width: 50%;
+    text-align: right;
+    font-family: 'Roboto Medium';
+}
+
+.plan-header-attribute {
+    width: 50%;
+    float: left;
+}
+
+.plan-header-value {
+    float: right;
+    width: 50%;
+    text-align: right;
+    font-family: 'Roboto Medium';
+}
+
+.lanista-exercices-foter {
+    height: 35px;
+    box-shadow: 0 1px 0 0 #fff inset;
+    border-radius: 0 0 3px 3px;
+    padding: 7px 8px 8px;
+    border-top: 1px solid #e7e7e7;
+    background-color: #f6f6f6;
+    float: left;
+    width: 100%;
+    color: #555;
+    font-family: 'Roboto Light'!important;
+    font-size: 14px;
+}
+
+.lanista-exercices-title {
+    font-family: 'Roboto Medium';
+    font-size: 13px;
+    color: #4aacd8;
+    padding: 5px;
+    float: right;
+    text-align: left;
+    width: 100%;
+    height: 67px!important;
+    background-color: white;
+}
+
+.exercise-list-envelope {
+    width: 180px!important;
+    height: 195px!important;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3) !important;
+    border-radius: 3px;
+    margin-left: 20px;
+    float: left;
+}
+
+.exercise-list-images{
+    height: 93px;
+    width: 180px;
+}
+
+.exercise-list-img{
+    height: 90px;
+    width: 90px;
+}
+
+.lanista-exercices-weight {
+    float: left;
+}
+
+.lanista-exercices-training {
+    float: right;
+}
+
+.lanista-exercices-sets {
+    text-align: center;
+    width: 100%;
+}
+
+.exercise-apply-delete {
+    font-family: 'Lanista Icons';
+    font-size: 18px;
+    color: red;
+    text-align: right;
+}
+
+//Rights Label
+.main-stage-footer {
+    text-align: right;
+    font-size: 13px;
+    color: #5f7883;
+}
+
+//Plan Panel - Exercise Panel - Configuration tab Panel
+.lanista-configuration-tabpanel .protocoll-configuration {
+    width: 100%;
+    text-align: left!important;
+}
+
+.lanista-configuration-tabpanel .x-form-textarea {
+    width: 650px!important;
+}
+
+.lanista-customerexercises-panel .lanista-grid-plans-customer {
+    width: 450px!important;
+    margin-left: 12px;
+}
+
+.lanista-customerexercises-panel .lanista-grid-plans-customer .x-grid-view {
+    width: 450px!important;
+}
+
+.lanista-customerexercises-panel .lanista-grid-plans-customer .x-grid-body {
+    width: 430px!important;
+}
+
+.lanista-customerexercises-panel .lanista-grid-plans-customer .x-column-header {
+    width: 450px!important;
+}
+
+.lanista-customerexercises-panel .lanista-grid-plans-customer .x-grid-with-row-lines .x-grid-table .x-box-target {
+    width: 450px!important;
+}
+
+.lanista-customerexercises-panel .x-grid-header-ct {
+    width: 450px!important;
+}
+
+.lanista-name-plan {
+    float: left;
+    font-size: 15px;
+    width: 65%;
+}
+
+.lanista-delete-plan {
+    width: 17%;
+    font-size: 15px!important;
+    text-align: center;
+}
+
+.lanista-createdate-plan {
+    float: right;
+    text-align: center;
+    width: 18%;
+    font-size: 12px;
+    color: #4aacd8;
+}
+
+//Plan panel,  managing Plans and Warnings buttons
+#listsContainer {
+    z-index: 2;
+    border: 1px solid #999;
+    margin: 10px;
+    margin-left: 0;
+    width: 455px!important;
+    margin-top: 110px;
+    margin-bottom: 10px;
+}
+
+.option-buttons {
+    margin-top: 110px;
+    margin-bottom: 10px;
+}
+
+.option-buttons .option-active {
+    background-color: white!important;
+    background-image: none;
+    border: 1px solid #999!important;
+    border-right: 0!important;
+    z-index: 3;
+    margin-right: 0;
+    margin-top: 0;
+    color: black!important;
+}
+
+.option-buttons .x-btn-default-small {
+    border-radius: 0;
+    margin-right: 20px;
+    -webkit-transition: 500ms linear 0s;
+    -moz-transition: 500ms linear 0s;
+    -o-transition: 500ms linear 0s;
+    transition: 500ms linear 0s;
+    height: 30px!important;
+}
+
+.option-buttons .x-btn-inner {
+    font-weight: bold;
+    font-size: 140%;
+    color: white;
+}
+
+.option-buttons .option-active .x-btn-inner {
+    color: black!important;
+}
+
+#showPlansOption {
+    background-image: none;
+    border: 0;
+    color: white;
+    background-color: #4aacd8;
+    width: 100%;
+}
+
+#showWarningsOption {
+    margin-top: 20px;
+    background-image: none;
+    border: 0;
+    color: white;
+    background-color: #fdb825;
+    width: 95%;
+}
+
+.lanista-icon {
+    font-family: 'Lanista Icons';
+    font-size: 18px;
+}
+
+.lanista-color-plan-delete {
+    color: red;
+    float: left!important;
+}
+
+.lanista-color-plan-no-delete {
+    color: silver!important;
+    float: left!important;
+}
+
+.lanista-grid-plan-rowsize {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.lanista-user-fieldset .x-fieldset-header-text, .lanista-myexercise-configuration .x-fieldset-header-text{
+    font: 20px/22px Roboto Light;
+    color: #000;
+    padding: 1px 0;
+}
+
+#planDescription .x-form-text {
+    height: 100px;
+}
+
+#trainingPlanOptions .x-fieldset-body {
+    width: 820px!important;
+    margin-left: 23px;
+    margin-top: 25px;
+}
+
+//Video Panel
+.x-css-shadow {
+    z-index: 0!important;
+    box-shadow: transparent!important;
+    width: 0!important;
+    height: 0!important;
+}
+
+.lanista-video {
+    width: 100% !important;
+    height: 75% !important;
+    z-index: 6 !important;
+}
+
+.lanista-video-item {
+    width: 100%;
+    height: 116%;
+    position: relative;
+    background: black;
+}
+
+.lanista-video-window span {
+    background: black!important;
+}
+
+//CopyRights
+.lanista-copyright {
+    height: 20px!important;
+    left: -100px!important;
+    margin: 0px;
+    width: 1423px;
+    text-align: right;
+}
+
+.lanista-copyrights-text{
+    display: block!important;
+    font-size: 13px;
+    color: darkslategray;
+}
+
+.lanista-copyrights-text span{
+    font-family: 'Harabara Bold';
+}
+
+.lanista-copyright .x-fit-item {
+    position: absolute!important;
+}
+
+
+//Managing deleting searching exercises
+.lanista-delete-search {
+    color: gainsboro;
+    font-size: 13px!important;
+}
+
+.lanista-color-delete {
+    color: red!important;
+}
+
+.lanista-color-no-delete {
+    color: gainsboro;
+}
+
+//Color for Header for Customers Favorites
+.lanista-header-color-favorites {
+    background-color: rgba(52,172,251,0.2)!important;
+}
+
+.lanista-header-color-favorites .header-title {
+    color: #34acfb!important;
+}
+
+//Color for favorites items selected
+.lanista-list-itemrounded-selected .customer-list-background {
+    box-shadow: 0 0 20px #59d76e;
+}
+
+//Color for favorites items selected for delete
+.lanista-list-itemrounded-selected-delete .customer-list-background,
+.lanista-x-exercise .lanista-list-itemrounded-selected-delete,
+.lanista-exercise-planpanel .lanista-list-itemrounded-selected-delete{
+    box-shadow: 0 0 20px #FC0536!important;
+}
+
+#viewCustomers, #viewFavorites {
+    top: 10px!important;
+}
+
+#viewFavorites {
+    top: 13px!important;
+}
+
+.lanista-favorites-delete {
+    float: right;
+    margin-right: 25px;
+}
+
+.lanista-item-delete {
+    text-align: right;
+}
+
+.lanista-active .x-btn-glyph{
+    box-shadow: 0 0 5px #4aacd8,inset 0 0 20px #4aacd8;
+    background-color: #4aacd8;
+    color: white;
+    overflow: visible;
+}
+
+//Templates
+.plan-duration-icon {
+    font-family: 'Lanista Icons';
+    color: #999;
+    float: left;
+    font-size: 18px;
+}
+
+.plan-privacy-icon {
+    font-family: 'Lanista Icons';
+    color: #999;
+    float: right;
+    font-size: 18px;
+}
+
+#templatesPanel, #defaultPlanValuesPanel {
+    padding-top: 120px;
+}
+
+.plan-content {
+    height: 142px;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom right,#f7f7f7,#e0e0e0);
+    text-align: left;
+}
+
+.plan-name {
+    height: 40px;
+    line-height: 15px;
+    font-family: 'Roboto Medium';
+    font-size: 14px;
+    color: #4aacd8;
+    margin: 10px;
+    margin-top: 20px;
+}
+
+.plan-description {
+    font-size: 13px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 70px;
+    overflow: hidden;
+}
+
+.lanista-template-item{
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    position: relative;
+    margin: 0 11px 22px 11px;
+    background: #fff;
+    width: 175px;
+    height: 177px;
+    overflow: visible;
+    display: inline-block;
+    transition: 100ms linear 0s;
+}
+
+.plan-duration {
+    font-family: 'Roboto Medium';
+    color: #555;
+    padding-left: 5px;
+    font-size: 16px;
+    float: left;
+}
+
+.plan-footer{
+    height: 35px;
+    box-shadow: 0 1px 0 0 #fff inset;
+    border-radius: 0 0 3px 3px;
+    padding: 7px 8px 8px;
+    border-top: 1px solid #e7e7e7;
+    background-color: #f6f6f6;
+    position: relative;
+    overflow: hidden;
+}
+
+.lanista-header-plan-duration{
+    text-transform: initial;
+    font-size: 16px;
+    font-family: "Roboto Medium";
+    line-height: 15px;
+}
+
+.dashboard-customer-background{
+    margin-right: inherit;
+    margin-top: 33px;
+    line-height: 34px;
+    width: 50px;
+    height: 35px;
+    border-radius: 50%;
+    background-size: cover;
+    font-family: "Lanista Icons";
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    display: block;
+    margin-left: auto;
+    background-color: grey;
+    top: 10px;
+    position: relative;
+}
+
+.plan-header-customer-info{
+    margin-right: inherit;
+    margin-top: -40px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-size: cover;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    border-style: solid;
+    border-color: cornflowerblue;
+    border-width: thin;
+}
+
+.lanista-plan-default-value{
+    font-family: "Roboto Medium";
+    font-size: 40px;
+    color: #5c93ce;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.3),0px -1px 0 rgba(0,0,0,0.7);
+    margin-top: 150px;
+    margin-left: 200px;
+}
+
+.lanista-setrounds{
+    margin-top: 230px;
+    margin-left: 290px;
+}
+
+//Cancel Button on DefaultValues Plan Panel
+.lanista-command-button-cancel-defaultvalues{
+    z-index:10;
+}
+
+//Template Header
+.lanista-header-template{
+    padding-top: 30px;
+}
+
+//MyExerciseInfoPanel
+.lanista-myexercise-panel {
+    padding-top: 95px!important;
+    top:0px!important;
+}
+
+.lanista-myexercise-configuration{
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.lanista-myexercise-configuration{
+    border: 0px;
+    padding: 0px 0px!important;
+}
+
+.lanista-myexercise-configuration legend{
+    -webkit-padding-start: 0px!important;
+}
+
+.lanista-field-myexercise .x-form-item-body{
+    width: 35%!important;
+}
+
+.lanista-field-myexercise .x-form-item-body input{
+    border-width: 1px 1px 0px 0px;
+}
+
+.lanista-field-myexercise .x-field-label-cell{
+    padding-top: 10px!important;
+    background-color: gainsboro;
+    border-top: 1px solid #fff;
+}
+
+.lanista-myexercise-configuration .x-form-text{
+    border-bottom: 0px;
+}
+
+.lanista-myexercise-configuration .lanista-field-myexercise:last-of-type .x-field-label-cell, .lanista-field-myexercise:last-of-type .x-field-label-cell{
+    border-bottom-left-radius: 0.4em;
+}
+
+.lanista-myexercise-configuration .lanista-field-myexercise:first-of-type .x-field-label-cell, .lanista-field-myexercise:first-of-type .x-field-label-cell{
+    border-top: 1px solid gainsboro!important;
+}
+
+.lanista-myexercise-configuration .lanista-field-myexercise:last-of-type .x-form-field{
+    border-bottom: 1px solid gainsboro;
+}
+
+.lanista-myexercise-panel .lanista-field-myexercise-other input{
+    border-bottom-width: 1px;
+}
+
+.lanista-customer-myexercise-img{
+    height: 300px;
+    width: 45%;
+    background-color: #f7f7f7;
+    background-size: cover;
+}
+
+.customer-exercise-img-right{
+    float: right;
+}
+
+.customer-exercise-img-left{
+    float: left;
+}
+
+.lanista-customer-myexercise-image-title{
+    font-size: 17px;
+    margin-top: 12px;
+    height: 32px;
+}
+
+.lanista-customer-myexercise-image-title-right{
+    float: right;
+}
+
+.lanista-customer-myexercise-image-title-left{
+    float: left;
+}
+
+//Measures Panel
+.lanista-measures-panel{
+    margin-top: 120px;
+}
+
+//Logo for Bu
+.plan-header-info-bu .plan-header-customer-info{
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: inherit;
+    border-style: none;
+    width: 120px;
+    height: 50px;
+    background-position: center;
+}
+
+//Border tab Panel
+#planPanel .x-panel-body-default{
+    border: none;
+    //height: 225px!important;
+    height: 31%;
+}
+
+//Searching by planid
+.plan-header-email{
+    text-align: right;
+    font-size: 14px;
+}
+
+#exercisePanel .x-panel-body-default{
+    background: transparent;
+}
+
+.plan-header-info .plan-createddate-info{
+    height: 21px;
+}
+
+.plan-exercises-panel{
+    top: 205px!important;
+    height: 28%;
+}
+
+.lanista-copyrights{
+    height: 20px!important;
+    //top: 700px!important;
+    z-index: 1;
+}
+
+
+
+

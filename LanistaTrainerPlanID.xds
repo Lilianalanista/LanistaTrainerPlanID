@@ -1,0 +1,82 @@
+{
+    "name": "LanistaTrainerPlanID",
+    "settings": {
+        "cmd": {
+            "license": "commercial",
+            "cmdVersion": "5.0.2.270",
+            "frameworkVersion": "5.0.1.1255"
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "http://localhost:1841",
+        "exportPath": "",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "projectHasEnabledWebServer": true,
+        "lastBuildSelection": {
+            "value": "webBuild",
+            "display": "Build web app"
+        }
+    },
+    "xdsVersion": "3.1.0",
+    "xdsBuild": 1943,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000007,
+    "framework": "ext50",
+    "viewOrderMap": {
+        "view": [
+            "dcd74970-8a06-4c6b-9f34-387fac931f68",
+            "ba663893-b8fd-458f-be95-2a2bf1cee377",
+            "c48a7c81-1e4d-482f-869d-8b74f0bb8b47",
+            "0496ebc0-9936-4e42-bf27-dc55ad43daff",
+            "121b717e-e242-43d3-9c3b-01fc890465b5",
+            "0846f34e-087e-461e-a578-059596b1b373",
+            "4e8f2248-2b4b-4eda-93c4-2fef2e1dedb0",
+            "a8249dd6-8aa3-472f-a320-22c3e889a919",
+            "e36694d9-5e24-4516-9d95-c7ae08518378",
+            "9bd50f3c-43d0-4fd1-b9e4-a46c816c66dc",
+            "0f1bd479-827f-4399-a359-492a9330fefe",
+            "2850b61c-bfde-4ff6-8869-65229478e000",
+            "8e26374f-ed14-4b5b-8f77-5557d72870f9",
+            "ff65c48e-0c33-4448-85ee-0a2e9a86e877",
+            "cacbab6d-1fa2-43e5-8fa9-d37245e8f6a7",
+            "06a73342-5d90-495d-9927-acf674d5d5b4",
+            "a518dcfe-60a5-4a2d-9073-cdef3b16d7d4",
+            "2aa54292-abb9-4fd9-aa11-8facbb9695e4",
+            "edbdad84-3eb1-4422-b58d-c16701c209e0",
+            "9437222f-efdd-49a1-9803-7a7a4e747d28"
+        ],
+        "store": [
+            "aa8c8ef7-8a08-4f20-8226-5899f7f72664",
+            "07e649a2-9f9b-40ef-b262-72f6799f4954",
+            "b65fb5aa-1c8f-49dc-97a5-05bf512664b6"
+        ],
+        "controller": [
+            "360928aa-1eb0-4c24-86a3-64849b27a074",
+            "8b4d234a-7e2a-4c25-9503-9318103bc0eb"
+        ],
+        "model": [
+            "bcf45203-9a6d-45da-b0cb-f38739ccb5af",
+            "dbfa7a68-3d8a-4ee2-a495-433882c267ab",
+            "22f234cf-cc5b-4210-abcd-9bdd4f8e695c"
+        ],
+        "resource": [
+            "3264d889-1244-40ab-86f8-d5e902e88792",
+            "7538954c-c46d-42b1-8a29-f2ce5d434f42"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

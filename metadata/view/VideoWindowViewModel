@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "videowindow",
+        "designer|userClassName": "VideoWindowViewModel"
+    },
+    "designerId": "edbdad84-3eb1-4422-b58d-c16701c209e0"
+}

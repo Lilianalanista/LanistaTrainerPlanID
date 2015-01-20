@@ -1,0 +1,207 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "border": false,
+        "cls": "lanista-exercise-panel",
+        "container|align": "stretch",
+        "designer|userAlias": "exercisePanel",
+        "designer|userClassName": "ExercisePanel",
+        "height": 250,
+        "id": "exercisePanel",
+        "layout": "vbox",
+        "title": null,
+        "width": 400
+    },
+    "name": "MyPanel3",
+    "designerId": "cacbab6d-1fa2-43e5-8fa9-d37245e8f6a7",
+    "viewControllerInstanceId": "a518dcfe-60a5-4a2d-9073-cdef3b16d7d4",
+    "viewModelInstanceId": "06a73342-5d90-495d-9927-acf674d5d5b4",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "border": false,
+                "cls": "lanista-exercise-panel-header",
+                "id": "exercisePanelHeader",
+                "layout|flex": 1,
+                "title": null
+            },
+            "name": "MyPanel3",
+            "designerId": "3c9ae15a-6f61-4dc5-b4bd-9a0a40cd3368",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "tpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "tpl",
+                        "implHandler": [
+                            "<div class=\"exercise\">",
+                            "    <div class=\"exercise_name\">{[values[\"name_\"+Ext.ux.LanguageManager.lang]]}</div>",
+                            "    <div class=\"exercise-images\">",
+                            "        <div id=\"image-start-position\" class=\"exercise-image\" style=\"-webkit-background-size: cover; background-image: url({[(values.ext_id && values.ext_id.indexOf('CUST') != -1) ? (Ext.ux.ConfigManager.getServer() + Ext.ux.ConfigManager.getRoot() + '/tpmanager/img/b/'+values.ext_id) : 'resources/images/previews/'+values.ext_id]}_2.jpg);'\"></div>",
+                            "        <div id=\"image-start-position\" class=\"exercise-image\" style=\"-webkit-background-size: cover; background-image: url({[(values.ext_id && values.ext_id.indexOf('CUST') != -1) ? (Ext.ux.ConfigManager.getServer() + Ext.ux.ConfigManager.getRoot() + '/tpmanager/img/b/'+values.ext_id) : 'resources/images/previews/'+values.ext_id]}_1.jpg);'\"></div>",
+                            "    </div>",
+                            "</div>"
+                        ]
+                    },
+                    "name": "tpl",
+                    "designerId": "fffbd370-a614-44b2-80bb-0c093766b620"
+                }
+            ]
+        },
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "activeTab": 0,
+                "border": false,
+                "cls": "lanista-exercise-panel-content",
+                "headerPosition": null,
+                "id": "exercisePanelContent",
+                "layout|flex": 1,
+                "plain": true,
+                "tabBarHeaderPosition": 1,
+                "tabPosition": null
+            },
+            "name": "MyTabPanel1",
+            "designerId": "ce193c17-d2b5-4ce8-966d-ceee23f84f29",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "border": false,
+                        "id": "info",
+                        "title": "Info"
+                    },
+                    "name": "MyPanel5",
+                    "designerId": "93989330-711d-4800-9a75-2a3c7ba26568",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig4",
+                            "designerId": "057e9900-570f-45ad-b0db-942f4059fbc1"
+                        },
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "tpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "tpl",
+                                "implHandler": [
+                                    "<div class=\"exercise-description\">",
+                                    "    <div class=\"exercise-coaching-key\"><span><b>{[Ext.ux.LanguageManager.TranslationArray.EXECUTION]}</b></span><br>{[Ext.ux.LanguageManager.lang === \"EN\" ? values.coatchingnotes_EN : Ext.ux.LanguageManager.lang === \"ES\" ? this.strLines(values.coatchingnotes_ES) :  values.coatchingnotes_DE]}</div>",
+                                    "    <div class=\"exercise-errors\"><span><b>{[Ext.ux.LanguageManager.TranslationArray.POSSIBLE_ERRORS]}</b></span><br>{[this.strLines(values[\"mistakes_\"+Ext.ux.LanguageManager.lang])]}</div>",
+                                    "</div>"
+                                ]
+                            },
+                            "name": "tpl",
+                            "designerId": "2668e169-940b-4334-a581-3ab1ff7913f4",
+                            "cn": [
+                                {
+                                    "type": "templatefunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "value"
+                                        ],
+                                        "fn": "strLines",
+                                        "implHandler": [
+                                            "var returnValue = '',",
+                                            "    strSplit = [];",
+                                            "",
+                                            "for (var i = 0; i < value.length; i++){",
+                                            "    strSplit = value[i].split(\",\");",
+                                            "    for (var j = 0; j < strSplit.length; j++) {",
+                                            "        returnValue = returnValue + strSplit[j].trim().substr(0,1).toUpperCase() + strSplit[j].trim().substr(1) + '<br>';",
+                                            "    }",
+                                            "    strSplit = [];",
+                                            "}",
+                                            "return returnValue;"
+                                        ]
+                                    },
+                                    "name": "strLines",
+                                    "designerId": "be23da37-f389-4604-af94-9bd153da162a"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "border": false,
+                        "id": "alternatives",
+                        "title": "Alternatives"
+                    },
+                    "name": "MyPanel6",
+                    "designerId": "a174d944-e82a-493f-9770-8ce3d56c10e0",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig5",
+                            "designerId": "90ca8f77-72ad-40fb-80c4-200ba4fcea6a"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.tab.Bar",
+                    "reference": {
+                        "name": "tabBar",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "plain": true
+                    },
+                    "name": "MyTabBar1",
+                    "designerId": "a9b6ea78-94fe-4c1c-a9b5-e7aea0cf1989"
+                }
+            ]
+        }
+    ]
+}

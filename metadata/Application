@@ -1,0 +1,73 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "PlanController",
+            "ExerciseController"
+        ],
+        "models": [
+            "PlanExercise",
+            "Plan",
+            "ExerciseModel"
+        ],
+        "name": "LanistaTrainer",
+        "panels": [
+            "[]"
+        ],
+        "requires": [
+            "Ext.ux.SessionManager",
+            "Ext.ux.ConfigManager",
+            "Ext.ux.LanguageManager"
+        ],
+        "stores": [
+            "PlanStore",
+            "PlanExerciseStore",
+            "ExerciseStore"
+        ],
+        "views": [
+            "PlanExercisesList",
+            "MainViewport",
+            "PlanExercisesList1",
+            "ExercisesPanel",
+            "MyView",
+            "LanistaButton",
+            "ExercisePanel",
+            "VideoWindow"
+        ]
+    },
+    "name": "Application",
+    "configAlternates": {
+        "panels": "array"
+    },
+    "designerId": "application",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "panels",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "Ext.getStore('ExerciseStore').load();"
+                ]
+            },
+            "name": "launch",
+            "designerId": "ffec16fe-cd3a-4880-be2b-44b959b198b1"
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "border": false,
+        "closable": false,
+        "cls": "lanista-video-window",
+        "designer|userAlias": "videowindow",
+        "designer|userClassName": "VideoWindow",
+        "draggable": false,
+        "height": 510,
+        "id": "videoWindow",
+        "modal": true,
+        "resizable": [
+            "false"
+        ],
+        "style": "background: black;",
+        "title": null,
+        "width": 800
+    },
+    "name": "MyWindow",
+    "configAlternates": {
+        "style": "string"
+    },
+    "designerId": "2aa54292-abb9-4fd9-aa11-8facbb9695e4",
+    "viewControllerInstanceId": "9437222f-efdd-49a1-9803-7a7a4e747d28",
+    "viewModelInstanceId": "edbdad84-3eb1-4422-b58d-c16701c209e0",
+    "cn": [
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onVideoWindowHide",
+                "implHandler": [
+                    "component.destroy();"
+                ],
+                "name": "hide",
+                "scope": "me"
+            },
+            "name": "onVideoWindowHide",
+            "designerId": "d14628ab-c4b5-4157-935f-e34110de2225"
+        }
+    ]
+}

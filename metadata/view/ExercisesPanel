@@ -1,0 +1,315 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "defaultListenerScope": true,
+        "designer|userAlias": "exercisespanel",
+        "designer|userClassName": "ExercisesPanel",
+        "headerPosition": "bottom",
+        "height": 250,
+        "id": null,
+        "layout": "fit",
+        "style": "padding-top: 120px;",
+        "title": null,
+        "width": 400
+    },
+    "name": "MyPanel",
+    "configAlternates": {
+        "style": "string"
+    },
+    "designerId": "a8249dd6-8aa3-472f-a320-22c3e889a919",
+    "viewControllerInstanceId": "9bd50f3c-43d0-4fd1-b9e4-a46c816c66dc",
+    "viewModelInstanceId": "e36694d9-5e24-4516-9d95-c7ae08518378",
+    "cn": [
+        {
+            "type": "Ext.view.View",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": "lanista-exercises-view",
+                "itemId": "viewExercises",
+                "itemSelector": "div.exercise-item",
+                "store": "ExerciseStore"
+            },
+            "name": "MyView",
+            "designerId": "e6318a72-4409-4fbb-a77f-93c99e2d2340",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "tpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "tpl",
+                        "implHandler": [
+                            "<tpl for=\".\">",
+                            "    <div class=\"lanista-x-exercise\">",
+                            "        <div class=\"exercise-item\">",
+                            "            <div class=\"lanista-icon lanista-item-delete\"></div>",
+                            "            <div class=\"exercise-list-img exercise-list-img-right\" style=\"background-image: url(resources/images/previews/{ext_id}_1.jpg);\"></div>",
+                            "            <div class=\"exercise-list-img exercise-list-img-left\" style=\"background-image: url(resources/images/previews/{ext_id}_2.jpg);\"></div>",
+                            "            <div class=\"exercise-list-text\">{[values[\"name_\" + Ext.ux.LanguageManager.lang]]}</div>",
+                            "        </div>",
+                            "    </div>",
+                            "</tpl>"
+                        ]
+                    },
+                    "name": "tpl",
+                    "designerId": "29c6bcb2-d7a7-4d19-848a-f373f6befa4b"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onViewExercisesHide",
+                        "implHandler": [
+                            "    component.destroy();"
+                        ],
+                        "name": "hide",
+                        "scope": "me"
+                    },
+                    "name": "onViewExercisesHide",
+                    "designerId": "b8d21a37-1728-4e73-b585-43bf371ab2b0"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onViewExercisesAfterRender",
+                        "implHandler": [
+                            "    var itemRecord,",
+                            "        el = component.el,",
+                            "        itemId = [],",
+                            "        favoritesArray = [];",
+                            "",
+                            "    el.on(",
+                            "        'click', function(e,t) {",
+                            "            if (LanistaTrainer.app.panels[LanistaTrainer.app.panels.length - 2] === 'FavoritesPanel') return;",
+                            "",
+                            "            if ((LanistaTrainer.app.panels[LanistaTrainer.app.panels.length - 2] !== 'DashboardPanel') &&",
+                            "                (LanistaTrainer.app.panels[LanistaTrainer.app.panels.length - 2] !== 'LoginPanel') )",
+                            "            {",
+                            "                itemId = [];",
+                            "                itemId[0] = component.getRecord(t).data.id;",
+                            "                itemId[1] = component.getRecord(t).data.ext_id;",
+                            "",
+                            "                for(var i = 0; i < this.selection.length; i++) {",
+                            "                    if(this.selection[i][0] === itemId[0]) {",
+                            "                        break;",
+                            "                    }",
+                            "                }",
+                            "                if (i === this.selection.length)",
+                            "                {",
+                            "                    this.selection.push( itemId );",
+                            "                    Ext.get(t).addCls ( 'lanista-list-item-selected' );",
+                            "                    LanistaTrainer.app.getController('ExercisesController').getRightCommandPanel().getComponent('addPlanExercisesButton').show();",
+                            "                }",
+                            "                else {",
+                            "                    if (this.selection[i][2] === 1 && !(this.selection[i][3])) {",
+                            "                        this.selection[i][3] = 'd';",
+                            "                        Ext.get(t).removeCls ( 'lanista-list-item-selected' );",
+                            "                    }",
+                            "                    else {",
+                            "                        if (this.selection[i][2] === 1 && this.selection[i][3] === 'd'){",
+                            "                            this.selection[i][3] = '';",
+                            "                            Ext.get(t).addCls ( 'lanista-list-item-selected' );",
+                            "                            LanistaTrainer.app.getController('ExercisesController').getRightCommandPanel().getComponent('addPlanExercisesButton').show();",
+                            "                        }",
+                            "                        else{",
+                            "                            this.selection.splice(i, 1);",
+                            "                            Ext.get(t).removeCls ( 'lanista-list-item-selected' );",
+                            "                        }",
+                            "                    }",
+                            "                }",
+                            "            }",
+                            "            else {",
+                            "                itemRecord = component.getRecord(t);",
+                            "                LanistaTrainer.app.getController('ExercisesController').getExercisesPanel().addCls ('blured');",
+                            "                LanistaTrainer.app.fireEvent('showExercisePanel', itemRecord, '');",
+                            "            }",
+                            "        },",
+                            "        this, {delegate: '.exercise-item'});",
+                            "    el.on(",
+                            "        'mouseover', function(e,t) {",
+                            "            el.removeCls('item-not-clicked');",
+                            "            el.addCls('item-clicked');",
+                            "        },",
+                            "        this,{ delegate: '.exercise-item'});",
+                            "    el.on(",
+                            "        'mouseout', function(e,t) {",
+                            "",
+                            "            el.removeCls('item-clicked');",
+                            "            el.addCls('item-not-clicked');",
+                            "        },",
+                            "        this,{delegate: '.exercise-item'});"
+                        ],
+                        "name": "afterrender",
+                        "scope": "me"
+                    },
+                    "name": "onViewExercisesAfterRender",
+                    "designerId": "cf689c6f-648e-42cb-a56e-0a32ad5a9635"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onViewExercisesViewReady",
+                        "implHandler": [
+                            "        var records = dataview.store.data.items,",
+                            "            panel = LanistaTrainer.app.getController ('ExercisesController').getExercisesPanel(),",
+                            "            favorites,",
+                            "            favoritesArray = [];",
+                            "",
+                            "        /*if ( (LanistaTrainer.app.panels[LanistaTrainer.app.panels.length - 2] !== 'DashboardPanel') &&",
+                            "                     (LanistaTrainer.app.panels[LanistaTrainer.app.panels.length - 2] !== 'LoginPanel') &&",
+                            "                     (LanistaTrainer.app.panels[LanistaTrainer.app.panels.length - 2] !== 'CustomerExercisesPanel')) {",
+                            "                */",
+                            "        if ( (LanistaTrainer.app.panels[LanistaTrainer.app.panels.length - 2] !== 'DashboardPanel') &&",
+                            "            (LanistaTrainer.app.panels[LanistaTrainer.app.panels.length - 2] !== 'LoginPanel'))",
+                            "        {",
+                            "",
+                            "",
+                            "",
+                            "            if ( (LanistaTrainer.app.panels[LanistaTrainer.app.panels.length - 2] === 'FavoritesPanel')) {",
+                            "                favorites = LanistaTrainer.app.getController ('FavoritesController').favorites.data.objects;",
+                            "                favoritesArray = favorites !== \"\" ? favorites.split(',') : [];",
+                            "",
+                            "                if (favoritesArray.length > 0 ){",
+                            "                    for (var i = 0; i < records.length ; i++) {",
+                            "                        for (var j = 0; j < favoritesArray.length; j++) {",
+                            "                            if (Number(favoritesArray[j]) === Number(records[i].data.id)) {",
+                            "                                break;",
+                            "                            }",
+                            "                        }",
+                            "",
+                            "                        if (j !== favoritesArray.length){",
+                            "                            itemNode = dataview.getNode(records[i]);",
+                            "                            Ext.get(itemNode).addCls ( 'lanista-list-item-selected' );",
+                            "                        }",
+                            "                    }",
+                            "                }",
+                            "            }",
+                            "            else{",
+                            "                for (var i = 0; i < records.length ; i++) {",
+                            "                    for(var j = 0; j < panel.selection.length; j++) {",
+                            "                        if(panel.selection[j][0] === records[i].data.id) {",
+                            "                            break;",
+                            "                        }",
+                            "                    }",
+                            "                    if (j !== panel.selection.length){",
+                            "                        itemNode = panel.down('#viewExercises').getNode(records[i]);",
+                            "                        Ext.get(itemNode).addCls ( 'lanista-list-item-selected' );",
+                            "                    }",
+                            "                }",
+                            "            }",
+                            "        }"
+                        ],
+                        "name": "viewready",
+                        "scope": "me"
+                    },
+                    "name": "onViewExercisesViewReady",
+                    "designerId": "6dec39da-1e2f-44bf-9787-f216e0859cb0"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onViewExercisesItemClick",
+                        "implHandler": [
+                            "var favorites = \"\",",
+                            "    favoritesArray = [],",
+                            "    pos;",
+                            "",
+                            "if (LanistaTrainer.app.panels[LanistaTrainer.app.panels.length - 2] === 'FavoritesPanel'){",
+                            "    favorites = new String(LanistaTrainer.app.getController('FavoritesController').favorites.data.objects);",
+                            "    if (favorites.valueOf()){",
+                            "        if (favorites.indexOf(\",\") > 0)",
+                            "            favoritesArray = favorites.split(\",\");",
+                            "        else",
+                            "            favoritesArray[0] = favorites.valueOf();",
+                            "    }",
+                            "",
+                            "    pos = favoritesArray.indexOf(record.data.id.toString());",
+                            "    if (pos >= 0){",
+                            "        Ext.get(item).removeCls ( 'lanista-list-item-selected' );",
+                            "        favoritesArray.splice(pos,1);",
+                            "        favorites = \"\";",
+                            "        if (favoritesArray.length > 0){",
+                            "            favorites = favoritesArray[0];",
+                            "            for (var i = 1; i < favoritesArray.length; i++){",
+                            "                favorites = favorites + ',' + favoritesArray[i];",
+                            "            }",
+                            "        }",
+                            "        LanistaTrainer.app.getController('FavoritesController').favorites.data.objects = favorites;",
+                            "    }",
+                            "    else{",
+                            "        Ext.get(item).addCls ( 'lanista-list-item-selected' );",
+                            "        LanistaTrainer.app.getController('FavoritesController').favorites.data.objects = favorites.valueOf() ? favorites + ',' + record.data.id : record.data.id;",
+                            "    }",
+                            "}",
+                            "",
+                            ""
+                        ],
+                        "name": "itemclick",
+                        "scope": "me"
+                    },
+                    "name": "onViewExercisesItemClick",
+                    "designerId": "0f5ddd0a-865c-4420-9495-ae82fd075df3"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Tool",
+            "reference": {
+                "name": "tools",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "previousExercises",
+                "type": "left"
+            },
+            "name": "MyTool",
+            "designerId": "718b4387-696c-4c14-9714-d7be11e30038"
+        },
+        {
+            "type": "Ext.panel.Tool",
+            "reference": {
+                "name": "tools",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "nextExercises",
+                "type": "right"
+            },
+            "name": "MyTool1",
+            "designerId": "0ff36b3a-3770-4dd0-890b-8f99b36d9f9b"
+        }
+    ]
+}
