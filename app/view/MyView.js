@@ -35,8 +35,8 @@ Ext.define('LanistaTrainer.view.MyView', {
         '        <div class="exercise-list-delete"></div>',
         '        <div class="exercise-list-fields">',
         '            <div class="exercise-list-images">',
-        '                <div class="exercise-list-img exercise-list-img-right" style="background-image: url({[(values[\'exercise_ext_id\'] && values[\'exercise_ext_id\'].indexOf (\'CUST\') == -1) ? (\'resources/images/previews/\'+values[\'exercise_ext_id\']) : (Ext.ux.ConfigManager.getServer() + Ext.ux.ConfigManager.getRoot() + \'/tpmanager/img/s/\'+values[\'exercise_ext_id\'])]}_2.jpg);"></div>',
-        '                <div class="exercise-list-img exercise-list-img-left" style="background-image: url({[(values[\'exercise_ext_id\'] && values[\'exercise_ext_id\'].indexOf (\'CUST\') == -1) ? (\'resources/images/previews/\'+values[\'exercise_ext_id\']) : (Ext.ux.ConfigManager.getServer() + Ext.ux.ConfigManager.getRoot() + \'/tpmanager/img/s/\'+values[\'exercise_ext_id\'])]}_1.jpg);"></div>',
+        '                <div class="exercise-list-img exercise-list-img-right" style="background-image: url({[(values[\'exercise_ext_id\'] && values[\'exercise_ext_id\'].indexOf (\'CUST\') == -1) ? (\'http://lanista-training.com/app/resources/images/previews/\'+values[\'exercise_ext_id\']) : (Ext.ux.ConfigManager.getServer() + Ext.ux.ConfigManager.getRoot() + \'/tpmanager/img/s/\'+values[\'exercise_ext_id\'])]}_2.jpg);"></div>',
+        '                <div class="exercise-list-img exercise-list-img-left" style="background-image: url({[(values[\'exercise_ext_id\'] && values[\'exercise_ext_id\'].indexOf (\'CUST\') == -1) ? (\'http://lanista-training.com/app/resources/images/previews/\'+values[\'exercise_ext_id\']) : (Ext.ux.ConfigManager.getServer() + Ext.ux.ConfigManager.getRoot() + \'/tpmanager/img/s/\'+values[\'exercise_ext_id\'])]}_1.jpg);"></div>',
         '            </div>',
         '            <div class="lanista-exercices-title">{[values["exercise_name"]]}</div>',
         '            <div class="lanista-exercices-foter">',
@@ -60,30 +60,63 @@ Ext.define('LanistaTrainer.view.MyView', {
     },
 
     onPlanExercisesListAfterRender: function(component, eOpts) {
-        el = component.el;
+        var el = component.el,
+            userId = localStorage.getItem("user_id");
 
         el.on(
             'click', function(e,t) {
                 var controller = LanistaTrainer.app.getController ('PlanController'),
+                    userId = localStorage.getItem("user_id"),
                     activeTab = controller.getPlanPanel().down('tabpanel').getActiveTab(),
                     //Exercise = Ext.data.schema.Schema.getModel('LanistaTrainer.model.ExerciseModel'),
-                    exerciseStore = Ext.getStore( "ExerciseStore" ),
+                    //exerciseStore = Ext.getStore( "ExerciseStore" ),
+                    exerciseStore,
                     record,
                     j = 0;
 
                 for (var i = 0; i < activeTab.el.dom.childNodes.length; i++)
                 {
-                   if (activeTab.el.dom.childNodes[i].nodeName === 'DIV'){
-                       activeTab.el.dom.childNodes[i].internalId = j;
-                       j++;
-                   }
+                    if (activeTab.el.dom.childNodes[i].nodeName === 'DIV'){
+                        activeTab.el.dom.childNodes[i].internalId = j;
+                        j++;
+                    }
                 }
 
                 var internalItemId = Ext.get(t).dom.parentNode.internalId,
                     itemRecord = activeTab.recordsArray[internalItemId];
 
                 itemRecord.internalId = internalItemId;
-                record = exerciseStore.findRecord('id', itemRecord.exercise_id !== 0 ? itemRecord.exercise_id : itemRecord.user_exercise_id);
+
+                if (itemRecord.exercise_id !== 0){
+                    exerciseStore = Ext.getStore( "ExerciseInitialStore" );
+                    record = exerciseStore.findRecord('id', itemRecord.exercise_id);
+                }
+                else{
+                    exerciseStore = Ext.getStore('OwnExercisesStore');
+                    record = exerciseStore.findRecord('id', itemRecord.id);
+                    /*Ext.Ajax.request({
+                        url: Ext.ux.ConfigManager.getRoot() +'/tpmanager/planexercises/gettemplaterexercises',
+                        method: 'get',
+                        headers: {
+                            user_id: userId
+                        },
+                        params: {
+                            id: itemRecord.id
+                        },
+                        failure : function(result, request){
+                            console.log( "There were problems in looking for exercise" );
+                        },
+                        success: function(response, opts) {
+                            try {
+                                var data = Ext.decode(response.responseText);
+                            }
+                            catch( err ) {
+                                Ext.Msg.alert('Problem', 'There were problems in looking for exercise', Ext.emptyFn);
+                            }
+                        }
+                    });*/
+                }
+
                 LanistaTrainer.app.getController('PlanController').getPlanPanel().addCls ('blured');
                 LanistaTrainer.app.fireEvent('showExercisePanel', record, itemRecord);
 

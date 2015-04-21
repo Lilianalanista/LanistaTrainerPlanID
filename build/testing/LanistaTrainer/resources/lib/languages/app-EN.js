@@ -184,6 +184,7 @@ BACKWARD: 'Backward',
 CREATED_AT: 'Created at',
 PLANS: 'Plans',
 PLAN_FROM_TRAINER: 'From trainer',
+PLAN_FROM_GYM: 'To Gym',
 
 GOAL_CHANGE: 'change goal',
 DRUG_CHANGE: 'change drug',

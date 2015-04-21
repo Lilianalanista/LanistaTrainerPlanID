@@ -156,7 +156,8 @@ Ext.define('LanistaTrainer.view.MainViewport', {
                                                     }
                                                 ],
                                                 listeners: {
-                                                    tabchange: 'onTabpanelTabChange'
+                                                    tabchange: 'onTabpanelTabChange',
+                                                    afterrender: 'onExercicesPanelAfterRender'
                                                 },
                                                 tabBar: {
                                                     xtype: 'tabbar',
@@ -212,8 +213,8 @@ Ext.define('LanistaTrainer.view.MainViewport', {
     },
 
     processD1: function(config) {
+        //    config.title = Ext.ux.LanguageManager.TranslationArray.DAY + ' 1';
 
-        config.title = Ext.ux.LanguageManager.TranslationArray.DAY + ' 1';
 
         return config;
     },
@@ -238,6 +239,14 @@ Ext.define('LanistaTrainer.view.MainViewport', {
             tabPanel.setActiveTab(newCard);
             tabPanel.getActiveTab().getEl().setHeight(tabPanel.getActiveTab().el.dom.clientHeight - 45);
         }*/
+    },
+
+    onExercicesPanelAfterRender: function(component, eOpts) {
+        setTimeout(function() {
+                component.getTabBar().items.items[0].el.setHtml(Ext.ux.LanguageManager.TranslationArray.DAY + ' 1');
+        },1000);
+
+
     },
 
     onViewportResize: function(component, width, height, oldWidth, oldHeight, eOpts) {

@@ -27,7 +27,9 @@
         "stores": [
             "PlanStore",
             "PlanExerciseStore",
-            "ExerciseStore"
+            "ExerciseStore",
+            "ExerciseInitialStore",
+            "OwnExercises"
         ],
         "views": [
             "PlanExercisesList",
@@ -63,7 +65,8 @@
             "userConfig": {
                 "fn": "launch",
                 "implHandler": [
-                    "Ext.getStore('ExerciseStore').load();"
+                    "Ext.getStore('ExerciseInitialStore').load();",
+                    ""
                 ]
             },
             "name": "launch",

@@ -192,6 +192,19 @@
             },
             "name": "MyInteger18",
             "designerId": "3cc391fb-fa00-4786-8eb6-10012d14aa74"
+        },
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "a"
+            },
+            "name": "MyLocalStorageProxy1",
+            "designerId": "03afbd74-6435-40db-adee-0b96fb3212d2"
         }
     ]
 }

@@ -248,8 +248,8 @@
                                                         ],
                                                         "fn": "processD1",
                                                         "implHandler": [
+                                                            "//    config.title = Ext.ux.LanguageManager.TranslationArray.DAY + ' 1';",
                                                             "",
-                                                            "config.title = Ext.ux.LanguageManager.TranslationArray.DAY + ' 1';",
                                                             "",
                                                             "return config;"
                                                         ]
@@ -336,6 +336,28 @@
                                             },
                                             "name": "MyTabBar",
                                             "designerId": "9ac30d10-e1e2-4dec-9d96-e690ba876a73"
+                                        },
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onExercicesPanelAfterRender",
+                                                "implHandler": [
+                                                    "setTimeout(function() {",
+                                                    "        component.getTabBar().items.items[0].el.setHtml(Ext.ux.LanguageManager.TranslationArray.DAY + ' 1');",
+                                                    "},1000);",
+                                                    "",
+                                                    ""
+                                                ],
+                                                "name": "afterrender",
+                                                "scope": "me"
+                                            },
+                                            "name": "onExercicesPanelAfterRender",
+                                            "designerId": "c6908645-3a34-4442-af89-8d75590f6fb2"
                                         }
                                     ]
                                 }

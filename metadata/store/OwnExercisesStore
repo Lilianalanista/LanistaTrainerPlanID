@@ -1,0 +1,42 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "OwnExercisesStore",
+        "model": "ExerciseModel",
+        "storeId": "OwnExercisesStore"
+    },
+    "name": "ExerciseInitialStore1",
+    "designerId": "8f336362-e04b-49a1-963d-aa7730f510c1",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "resources/data/exercises.json"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "56e6d0db-f7a6-495e-bc4b-b34e64c3be0f",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyJsonReader",
+                    "designerId": "0b1f80f8-b237-4108-bd2e-ee3421334736"
+                }
+            ]
+        }
+    ]
+}

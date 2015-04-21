@@ -51,7 +51,6 @@
                                     "cn": [
                                         {
                                             "id": "f111f1ab-8aa3-4cea-8948-0c36fea0767f",
-                                            "expanded": false,
                                             "cn": [
                                                 {
                                                     "id": "d9f5b2c4-a77f-402c-9fba-5c41f7277079"
@@ -82,6 +81,9 @@
                                                 },
                                                 {
                                                     "id": "9ac30d10-e1e2-4dec-9d96-e690ba876a73"
+                                                },
+                                                {
+                                                    "id": "c6908645-3a34-4442-af89-8d75590f6fb2"
                                                 }
                                             ]
                                         }
@@ -231,7 +233,6 @@
                     "cn": [
                         {
                             "id": "93989330-711d-4800-9a75-2a3c7ba26568",
-                            "expanded": false,
                             "cn": [
                                 {
                                     "id": "057e9900-570f-45ad-b0db-942f4059fbc1"
@@ -312,7 +313,38 @@
             "id": "b65fb5aa-1c8f-49dc-97a5-05bf512664b6",
             "cn": [
                 {
-                    "id": "0aac66c0-59b6-4bc3-a80f-6a15acf6f660"
+                    "id": "0aac66c0-59b6-4bc3-a80f-6a15acf6f660",
+                    "cn": [
+                        {
+                            "id": "34074249-fd08-4be7-81b1-78a591c15315"
+                        }
+                    ]
+                }
+            ]
+        },
+        "3cb69cc8-880b-41bb-b68b-36fb38b39cb4": {
+            "id": "3cb69cc8-880b-41bb-b68b-36fb38b39cb4",
+            "cn": [
+                {
+                    "id": "cbaf9e81-7d86-4716-9497-34cdb87369a2",
+                    "cn": [
+                        {
+                            "id": "5b82794c-a95e-42d6-8fff-fe2594ceba1d"
+                        }
+                    ]
+                }
+            ]
+        },
+        "8f336362-e04b-49a1-963d-aa7730f510c1": {
+            "id": "8f336362-e04b-49a1-963d-aa7730f510c1",
+            "cn": [
+                {
+                    "id": "56e6d0db-f7a6-495e-bc4b-b34e64c3be0f",
+                    "cn": [
+                        {
+                            "id": "0b1f80f8-b237-4108-bd2e-ee3421334736"
+                        }
+                    ]
                 }
             ]
         },
@@ -482,6 +514,9 @@
                 },
                 {
                     "id": "3cc391fb-fa00-4786-8eb6-10012d14aa74"
+                },
+                {
+                    "id": "03afbd74-6435-40db-adee-0b96fb3212d2"
                 }
             ]
         },
@@ -625,22 +660,19 @@
     },
     "tabState": {
         "openTabs": [
-            "2aa54292-abb9-4fd9-aa11-8facbb9695e4",
+            "0f1bd479-827f-4399-a359-492a9330fefe",
+            "dcd74970-8a06-4c6b-9f34-387fac931f68",
             "application",
-            "8b4d234a-7e2a-4c25-9503-9318103bc0eb",
-            "0496ebc0-9936-4e42-bf27-dc55ad43daff",
-            "7538954c-c46d-42b1-8a29-f2ce5d434f42",
-            "360928aa-1eb0-4c24-86a3-64849b27a074",
-            "cacbab6d-1fa2-43e5-8fa9-d37245e8f6a7",
-            "2850b61c-bfde-4ff6-8869-65229478e000"
+            "8f336362-e04b-49a1-963d-aa7730f510c1",
+            "360928aa-1eb0-4c24-86a3-64849b27a074"
         ]
     },
     "canvasState": {
         "topInstance": null
     },
     "inspectorState": {
-        "topInstance": "0496ebc0-9936-4e42-bf27-dc55ad43daff",
-        "selectedInstance": "51b3975b-dd12-4adc-b75f-7949246c5304"
+        "topInstance": "0f1bd479-827f-4399-a359-492a9330fefe",
+        "selectedInstance": "954e6ed7-96da-4fa6-acd4-d8532014a3b5"
     },
     "editMode": "code",
     "userSettings": {

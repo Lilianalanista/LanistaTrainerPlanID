@@ -59,13 +59,14 @@ Ext.define('LanistaTrainer.controller.PlanController', {
 
         var controller = this,
             plan,
-            language;
+            language,
+            userId = localStorage.getItem("user_id");
 
         language = Ext.ux.LanguageManager.lang;
 
         Ext.Ajax.request({
             url: Ext.ux.ConfigManager.getServer() + Ext.ux.ConfigManager.getRoot() + "/tpmanager/plan/getplan",
-            params: {id: id, language: language},
+            params: {id: id, lang: language},
             method: 'post',
             failure : function(result, request){
                 console.log( "Failure form getPlan" );
@@ -130,6 +131,24 @@ Ext.define('LanistaTrainer.controller.PlanController', {
             }
         });
 
+        Ext.getStore('OwnExercisesStore').setProxy(new Ext.data.proxy.Ajax({
+            url: Ext.ux.ConfigManager.getRoot() + '/tpmanager/planexercises/gettemplaterexercises',
+            model: 'LanistaTrainer.model.ExerciseModel',
+            noCache: false,
+            reader: {
+                type: 'json',
+                root: 'entries'
+            },
+            extraParams: {
+                id: id
+            },
+            headers: {
+                user_id: userId
+            }
+        }));
+        Ext.getStore('OwnExercisesStore').load();
+
+
     },
 
     onShowPlanPanel: function(planname, callback) {
@@ -167,6 +186,7 @@ Ext.define('LanistaTrainer.controller.PlanController', {
             divLogo = '';
             divInfoCustomer = '';
             title = '';
+
 
             title = "";
             divLogo = "<div class='lanista-header-template'><div class='lanista-header-plan-name'>" + controller.planname +

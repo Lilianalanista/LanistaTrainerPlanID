@@ -37,7 +37,9 @@ Ext.application({
     stores: [
         'PlanStore',
         'PlanExerciseStore',
-        'ExerciseStore'
+        'ExerciseStore',
+        'ExerciseInitialStore',
+        'OwnExercisesStore'
     ],
     views: [
         'PlanExercisesList',
@@ -57,7 +59,8 @@ Ext.application({
 
     launch: function() {
         Ext.create('LanistaTrainer.view.MainViewport');
-        Ext.getStore('ExerciseStore').load();
+        Ext.getStore('ExerciseInitialStore').load();
+
     }
 
 });

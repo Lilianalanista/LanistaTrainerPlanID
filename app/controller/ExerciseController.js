@@ -41,7 +41,7 @@ Ext.define('LanistaTrainer.controller.ExerciseController', {
     },
 
     control: {
-        "tabpanel": {
+        "#exercisePanelContent": {
             tabchange: 'onTabpanelTabChange'
         },
         "viewport #closeExercisePanel": {
@@ -104,57 +104,57 @@ Ext.define('LanistaTrainer.controller.ExerciseController', {
     },
 
     onShowExercisePanel: function(record, exerciseProtocoll, callback) {
-                var controller = this,
-                    exercisePanel	= controller.getExercisePanel(),
-                    mainStage	= controller.getMainStage();
+        var controller = this,
+            exercisePanel	= controller.getExercisePanel(),
+            mainStage	= controller.getMainStage();
 
-                controller.currentPlanExercise = exerciseProtocoll;
-                controller.record = record;
+        controller.currentPlanExercise = exerciseProtocoll;
+        controller.record = record;
 
-                exercisePanel.down('#exercisePanelHeader').data = record.data;
-                exercisePanel.down('#exercisePanelContent').items.items[0].data = record.data;
-                controller.setActiveItemNew();
+        exercisePanel.down('#exercisePanelHeader').data = record.data;
+        exercisePanel.down('#exercisePanelContent').items.items[0].data = record.data;
+        controller.setActiveItemNew();
 
-                var currentPlan = LanistaTrainer.app.getController ( 'PlanController' ).plan;
-                if ( currentPlan ) {
-                    controller.currentPlanExercise.training = controller.currentPlanExercise.training_min;
-                    controller.currentPlanExercise.weight = controller.currentPlanExercise.weight_min;
-                }
+        var currentPlan = LanistaTrainer.app.getController ( 'PlanController' ).plan;
+        if ( currentPlan ) {
+            controller.currentPlanExercise.training = controller.currentPlanExercise.training_min;
+            controller.currentPlanExercise.weight = controller.currentPlanExercise.weight_min;
+        }
 
-                exercisePanel.addCls('md-show');
-                mainStage.add( exercisePanel );
-                mainStage.getLayout().setActiveItem("exercisePanel",'1');
+        exercisePanel.addCls('md-show');
+        mainStage.add( exercisePanel );
+        mainStage.getLayout().setActiveItem("exercisePanel",'1');
 
-                exercisePanel.on('hide', function(component) {
-                    component.destroy();
-                }, controller);
+        exercisePanel.on('hide', function(component) {
+            component.destroy();
+        }, controller);
 
-                controller.getLeftCommandPanel().items.each(function (item) {
-                    item.hide();
-                });
-                controller.getLeftCommandPanel().add(
-                    Ext.create('LanistaTrainer.view.LanistaButton', {
-                        text: Ext.ux.LanguageManager.TranslationArray.CLOSE,
-                        itemId: 'closeExercisePanel',
-                        glyph: '98@Lanista Icons', //b
-                        cls: [
-                            'lanista-command-button',
-                            'lanista-command-button-red'
-                        ]
-                    })
-                );
+        controller.getLeftCommandPanel().items.each(function (item) {
+            item.hide();
+        });
+        controller.getLeftCommandPanel().add(
+            Ext.create('LanistaTrainer.view.LanistaButton', {
+                text: Ext.ux.LanguageManager.TranslationArray.CLOSE,
+                itemId: 'closeExercisePanel',
+                glyph: '98@Lanista Icons', //b
+                cls: [
+                    'lanista-command-button',
+                    'lanista-command-button-red'
+                ]
+            })
+        );
 
 
-                // *** 2 Show the panel
-                exercisePanel.show();
+        // *** 2 Show the panel
+        exercisePanel.show();
 
-                //exercisePanel.down('#exercisePanelContent').fireEvent('tabchange', exercisePanel, exercisePanel.down('#exercisePanelContent').setActiveTab(0));
-                controller.showInfoTabCommands();
-                LanistaTrainer.app.fireEvent('showExerciseHeaderUpdate');
-                LanistaTrainer.app.fireEvent('showStage');
+        //exercisePanel.down('#exercisePanelContent').fireEvent('tabchange', exercisePanel, exercisePanel.down('#exercisePanelContent').setActiveTab(0));
+        controller.showInfoTabCommands();
+        LanistaTrainer.app.fireEvent('showExerciseHeaderUpdate');
+        LanistaTrainer.app.fireEvent('showStage');
 
-                // *** 4 Callback
-                if (callback instanceof Function) callback();
+        // *** 4 Callback
+        if (callback instanceof Function) callback();
 
     },
 

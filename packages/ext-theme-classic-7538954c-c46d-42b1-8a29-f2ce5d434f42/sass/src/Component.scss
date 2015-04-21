@@ -823,6 +823,7 @@ $base-gradient: "none";
     background-color: #f4f4f4!important;
     padding-top: 15px;
     height: 430px;
+    overflow: auto;
 }
 
 .exercise-description  {
@@ -1789,6 +1790,8 @@ $base-gradient: "none";
     z-index: 1;
 }
 
-
-
-
+.x-tab{
+  font: bold 11px/13px tahoma,arial,verdana,sans-serif!important;
+  color: #416da3!important;
+  max-width: 100%!important;
+}

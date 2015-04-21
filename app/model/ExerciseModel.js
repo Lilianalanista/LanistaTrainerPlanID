@@ -17,7 +17,8 @@ Ext.define('LanistaTrainer.model.ExerciseModel', {
     extend: 'Ext.data.Model',
 
     requires: [
-        'Ext.data.field.Integer'
+        'Ext.data.field.Integer',
+        'Ext.data.proxy.LocalStorage'
     ],
 
     fields: [
@@ -66,5 +67,10 @@ Ext.define('LanistaTrainer.model.ExerciseModel', {
             type: 'int',
             name: 'addition'
         }
-    ]
+    ],
+
+    proxy: {
+        type: 'localstorage',
+        id: 'a'
+    }
 });
