@@ -30955,7 +30955,6 @@ tr.x-grid-subtable-row {
 
 /* line 82, /Users/lilianadiaz/Sites/LanistaTrainerPlanID/build/temp/testing/LanistaTrainer/slicer-temp/../../../../../packages/ext-theme-classic-7538954c-c46d-42b1-8a29-f2ce5d434f42/sass/src/Component.scss */
 .header-I {
-  width: 13%;
   float: left;
 }
 
@@ -31788,7 +31787,6 @@ tr.x-grid-subtable-row {
 .lanista-exercise-planpanel {
   background-color: #f4f4f4!important;
   padding-top: 15px;
-  height: 430px;
   overflow: auto;
 }
 
@@ -32670,9 +32668,9 @@ tr.x-grid-subtable-row {
 .dashboard-customer-background {
   margin-right: inherit;
   margin-top: 33px;
-  line-height: 34px;
+  line-height: 50px;
   width: 50px;
-  height: 35px;
+  height: 50px;
   border-radius: 50%;
   background-size: cover;
   font-family: "Lanista Icons";
@@ -32870,7 +32868,6 @@ tr.x-grid-subtable-row {
 /* line 1782, /Users/lilianadiaz/Sites/LanistaTrainerPlanID/build/temp/testing/LanistaTrainer/slicer-temp/../../../../../packages/ext-theme-classic-7538954c-c46d-42b1-8a29-f2ce5d434f42/sass/src/Component.scss */
 .plan-exercises-panel {
   top: 205px!important;
-  height: 28%;
 }
 
 /* line 1787, /Users/lilianadiaz/Sites/LanistaTrainerPlanID/build/temp/testing/LanistaTrainer/slicer-temp/../../../../../packages/ext-theme-classic-7538954c-c46d-42b1-8a29-f2ce5d434f42/sass/src/Component.scss */

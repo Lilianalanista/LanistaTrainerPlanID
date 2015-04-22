@@ -29,7 +29,7 @@
             "PlanExerciseStore",
             "ExerciseStore",
             "ExerciseInitialStore",
-            "OwnExercises"
+            "OwnExercisesStore"
         ],
         "views": [
             "PlanExercisesList",

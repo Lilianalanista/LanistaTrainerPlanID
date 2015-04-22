@@ -561,7 +561,7 @@ Ext.define('LanistaTrainer.controller.PlanController', {
                             Ext.Ajax.request({
                                 url: Ext.ux.ConfigManager.getServer() + Ext.ux.ConfigManager.getRoot() + "/tpmanager/plan/sendmail",
                                 method: 'post',
-                                params: { plan_id: controller.plan.data.id, email: email },
+                                params: { plan_id: controller.plan.data.id, email: email, language: Ext.ux.LanguageManager.lang },
                                 headers: { user_id: localStorage.getItem("user_id") },
                                 failure : function(response){
                                     data = Ext.decode(response.responseText);

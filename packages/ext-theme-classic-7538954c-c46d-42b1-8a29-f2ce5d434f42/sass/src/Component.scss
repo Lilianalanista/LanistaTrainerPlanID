@@ -80,7 +80,7 @@ $base-gradient: "none";
 }
 
 .header-I{
-    width: 13%;
+    //width: 13%;
     float: left;
 }
 
@@ -822,7 +822,7 @@ $base-gradient: "none";
 .lanista-exercise-planpanel{
     background-color: #f4f4f4!important;
     padding-top: 15px;
-    height: 430px;
+    //height: 430px;
     overflow: auto;
 }
 
@@ -1603,9 +1603,9 @@ $base-gradient: "none";
 .dashboard-customer-background{
     margin-right: inherit;
     margin-top: 33px;
-    line-height: 34px;
+    line-height: 50px;
     width: 50px;
-    height: 35px;
+    height: 50px;
     border-radius: 50%;
     background-size: cover;
     font-family: "Lanista Icons";
@@ -1781,7 +1781,7 @@ $base-gradient: "none";
 
 .plan-exercises-panel{
     top: 205px!important;
-    height: 28%;
+    //height: 28%;
 }
 
 .lanista-copyrights{
@@ -1791,7 +1791,7 @@ $base-gradient: "none";
 }
 
 .x-tab{
-  font: bold 11px/13px tahoma,arial,verdana,sans-serif!important;
-  color: #416da3!important;
-  max-width: 100%!important;
+    font: bold 11px/13px tahoma,arial,verdana,sans-serif!important;
+    color: #416da3!important;
+    max-width: 100%!important;
 }

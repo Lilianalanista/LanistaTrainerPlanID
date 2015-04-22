@@ -141,9 +141,11 @@
                             "userConfig": {
                                 "border": false,
                                 "cls": "lanista-plan-panel",
+                                "container|align": "stretch",
                                 "height": null,
                                 "id": "planPanel",
                                 "itemId": "planPanel",
+                                "layout": "vbox",
                                 "title": null,
                                 "width": 400
                             },
@@ -202,7 +204,7 @@
                                 {
                                     "type": "Ext.tab.Panel",
                                     "reference": {
-                                        "name": "dockedItems",
+                                        "name": "items",
                                         "type": "array"
                                     },
                                     "codeClass": null,
@@ -210,10 +212,11 @@
                                         "activeTab": 1,
                                         "border": false,
                                         "cls": "plan-exercises-panel",
-                                        "dock": "bottom",
+                                        "dock": null,
                                         "height": null,
                                         "id": "exercicesPanel",
                                         "itemId": "exercicesPanel",
+                                        "layout|flex": 1,
                                         "title": null
                                     },
                                     "name": "MyTabPanel",
@@ -360,6 +363,25 @@
                                             "designerId": "c6908645-3a34-4442-af89-8d75590f6fb2"
                                         }
                                     ]
+                                },
+                                {
+                                    "type": "processcfgfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "config"
+                                        ],
+                                        "fn": "processPlanPanel",
+                                        "implHandler": [
+                                            "return config;"
+                                        ]
+                                    },
+                                    "name": "processPlanPanel",
+                                    "designerId": "5a40c23f-8e55-4cb7-8011-e3ff3735259b"
                                 }
                             ]
                         }
@@ -412,8 +434,8 @@
                     "",
                     "if (LanistaTrainer.app.getController('PlanController').getPlanPanel().down ('tabpanel').getActiveTab().el){",
                     "    if (!Ext.getCmp('mainStage')) return;",
-                    "    LanistaTrainer.app.getController('PlanController').getPlanPanel().down ('tabpanel').getActiveTab().getEl().setHeight(component.el.dom.clientHeight - 240);",
-                    "    LanistaTrainer.app.getController('PlanController').getPlanPanel().down ('tabpanel').getEl().setHeight(component.el.dom.clientHeight - 240);",
+                    "    //LanistaTrainer.app.getController('PlanController').getPlanPanel().down ('tabpanel').getActiveTab().getEl().setHeight(component.el.dom.clientHeight - 240);",
+                    "    //LanistaTrainer.app.getController('PlanController').getPlanPanel().down ('tabpanel').getEl().setHeight(component.el.dom.clientHeight - 240);",
                     "",
                     "}",
                     ""

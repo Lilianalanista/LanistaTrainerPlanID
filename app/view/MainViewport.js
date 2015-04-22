@@ -100,13 +100,17 @@ Ext.define('LanistaTrainer.view.MainViewport', {
                                 itemId: 'mainStage',
                                 layout: 'card',
                                 items: [
-                                    {
+                                    me.processPlanPanel({
                                         xtype: 'panel',
                                         border: false,
                                         cls: 'lanista-plan-panel',
                                         id: 'planPanel',
                                         itemId: 'planPanel',
                                         width: 400,
+                                        layout: {
+                                            type: 'vbox',
+                                            align: 'stretch'
+                                        },
                                         items: [
                                             {
                                                 xtype: 'panel',
@@ -130,12 +134,10 @@ Ext.define('LanistaTrainer.view.MainViewport', {
                                                     '    <div class="plan-header-email">{[values.bu_email !== "" ? values.bu_email : ""]}</div>',
                                                     '</div>'
                                                 ]
-                                            }
-                                        ],
-                                        dockedItems: [
+                                            },
                                             {
                                                 xtype: 'tabpanel',
-                                                dock: 'bottom',
+                                                flex: 1,
                                                 border: false,
                                                 cls: 'plan-exercises-panel',
                                                 id: 'exercicesPanel',
@@ -166,7 +168,7 @@ Ext.define('LanistaTrainer.view.MainViewport', {
                                                 }
                                             }
                                         ]
-                                    }
+                                    })
                                 ]
                             },
                             {
@@ -219,6 +221,10 @@ Ext.define('LanistaTrainer.view.MainViewport', {
         return config;
     },
 
+    processPlanPanel: function(config) {
+        return config;
+    },
+
     onTabpanelTabChange: function(tabPanel, newCard, oldCard, eOpts) {
         //var tapPanelSize = tabPanel.items.getCount(),
         //var   controller = LanistaTrainer.app.getController ('PlanController');
@@ -254,8 +260,8 @@ Ext.define('LanistaTrainer.view.MainViewport', {
 
         if (LanistaTrainer.app.getController('PlanController').getPlanPanel().down ('tabpanel').getActiveTab().el){
             if (!Ext.getCmp('mainStage')) return;
-            LanistaTrainer.app.getController('PlanController').getPlanPanel().down ('tabpanel').getActiveTab().getEl().setHeight(component.el.dom.clientHeight - 240);
-            LanistaTrainer.app.getController('PlanController').getPlanPanel().down ('tabpanel').getEl().setHeight(component.el.dom.clientHeight - 240);
+            //LanistaTrainer.app.getController('PlanController').getPlanPanel().down ('tabpanel').getActiveTab().getEl().setHeight(component.el.dom.clientHeight - 240);
+            //LanistaTrainer.app.getController('PlanController').getPlanPanel().down ('tabpanel').getEl().setHeight(component.el.dom.clientHeight - 240);
 
         }
 
