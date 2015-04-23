@@ -234,7 +234,7 @@
                                                 "itemId": "d1",
                                                 "preserveScrollOnRefresh": true
                                             },
-                                            "name": "myview",
+                                            "name": "myview1",
                                             "designerId": "089845fb-c091-432c-bc7b-b095cf8a7ddb",
                                             "masterInstanceId": "0f1bd479-827f-4399-a359-492a9330fefe",
                                             "cn": [
@@ -335,6 +335,7 @@
                                             "codeClass": null,
                                             "userConfig": {
                                                 "border": false,
+                                                "cls": "lanista-tabbar",
                                                 "plain": true
                                             },
                                             "name": "MyTabBar",

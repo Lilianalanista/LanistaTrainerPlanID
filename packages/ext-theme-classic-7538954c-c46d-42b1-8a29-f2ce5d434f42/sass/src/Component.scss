@@ -788,6 +788,12 @@ $base-gradient: "none";
     -o-transition: all .3s ease-in-out;
     -ms-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
+    filter: blur(10px); 
+    -webkit-filter: blur(10px); 
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px); 
+    -ms-filter: blur(10px);
+    filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius=‚10);
 }
 
 .exercise_name {
@@ -813,6 +819,7 @@ $base-gradient: "none";
     height: 40%;
     position: relative;
     z-index: 2;
+    background-size: cover;
 }
 
 .lanista-exercise-panel-content {
@@ -1141,6 +1148,7 @@ $base-gradient: "none";
 
 .plan-created-info {
     width: 100%;
+    float: right;
 }
 
 .plan-header-description {
@@ -1425,7 +1433,7 @@ $base-gradient: "none";
 
 .lanista-video-item {
     width: 100%;
-    height: 116%;
+    height: 102%;
     position: relative;
     background: black;
 }
@@ -1602,7 +1610,7 @@ $base-gradient: "none";
 
 .dashboard-customer-background{
     margin-right: inherit;
-    margin-top: 33px;
+    margin-top: 17px;
     line-height: 50px;
     width: 50px;
     height: 50px;
@@ -1794,4 +1802,13 @@ $base-gradient: "none";
     font: bold 11px/13px tahoma,arial,verdana,sans-serif!important;
     color: #416da3!important;
     max-width: 100%!important;
+}
+
+
+.lanista-video-window .x-window-body-default{
+    top: -44px!important;
+}
+
+.lanista-video-window .x-tab.x-tab-active.x-tab-default-top{
+    background-image: -webkit-gradient(linear, 50% 100%, 50% 100%, color-stop(0%, #ffffff), color-stop(25%, #f5f9fe), color-stop(45%, #deecfd))!important;
 }

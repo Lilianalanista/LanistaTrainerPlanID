@@ -164,6 +164,7 @@ Ext.define('LanistaTrainer.view.MainViewport', {
                                                 tabBar: {
                                                     xtype: 'tabbar',
                                                     border: false,
+                                                    cls: 'lanista-tabbar',
                                                     plain: true
                                                 }
                                             }

@@ -51,7 +51,6 @@
                                     "cn": [
                                         {
                                             "id": "f111f1ab-8aa3-4cea-8948-0c36fea0767f",
-                                            "expanded": false,
                                             "cn": [
                                                 {
                                                     "id": "d9f5b2c4-a77f-402c-9fba-5c41f7277079"
@@ -666,13 +665,7 @@
     },
     "tabState": {
         "openTabs": [
-            "0f1bd479-827f-4399-a359-492a9330fefe",
-            "dcd74970-8a06-4c6b-9f34-387fac931f68",
-            "application",
-            "8f336362-e04b-49a1-963d-aa7730f510c1",
-            "360928aa-1eb0-4c24-86a3-64849b27a074",
             "7538954c-c46d-42b1-8a29-f2ce5d434f42",
-            "cacbab6d-1fa2-43e5-8fa9-d37245e8f6a7",
             "0496ebc0-9936-4e42-bf27-dc55ad43daff"
         ]
     },

@@ -181,8 +181,10 @@ FORWARD: 'Hacia adelante',
 BACKWARD: 'Hacia atras',
 CREATED_AT: 'Creado el',
 PLANS: 'Planos',
-PLAN_FROM_TRAINER: 'Por el entrenador',
-PLAN_FROM_GYM: 'Para el gimnasio',
+
+PLAN_FROM_TRAINER: 'Creado por',
+
+PLAN_FROM_GYM: 'Creado por',
 
 GOAL_CHANGE: 'Cambio de meta',
 DRUG_CHANGE: 'Cambio de medicamento',
