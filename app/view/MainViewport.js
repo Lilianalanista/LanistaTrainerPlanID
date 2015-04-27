@@ -127,7 +127,7 @@ Ext.define('LanistaTrainer.view.MainViewport', {
                                                     '        <div class="plan-header-attribute">{[Ext.ux.LanguageManager.TranslationArray.CREATED_AT]}:</div><div class="plan-header-value">{[Ext.Date.format ( values.creation_date, \'d, M Y\' )]}</div>',
                                                     '    </div>',
                                                     '    <div class="plan-created-info">    ',
-                                                    '        <div class="plan-header-attribute">{[values.bu_name !== "" ? Ext.ux.LanguageManager.TranslationArray.PLAN_FROM_GYM : Ext.ux.LanguageManager.TranslationArray.PLAN_FROM_TRAINER]}:</div><div class="plan-header-value" id="planHeaderValue">{creator_name}</div>',
+                                                    '        <div class="plan-header-attribute">{[Ext.ux.LanguageManager.TranslationArray.PLAN_FROM]}:</div><div class="plan-header-value" id="planHeaderValue">{creator_name}</div>',
                                                     '    </div>',
                                                     '    <div class="dashboard-customer-background" style="customer-image">a</div>',
                                                     '    <div class="plan-header-customer-info" style="background-image: url({[ values.bu_name !== "" ? \'http://lanista-training.com/app/\' + values.bu_domain + \'/logo.png\' :  Ext.ux.ConfigManager.getServer() + Ext.ux.ConfigManager.getRoot() + \'/tpmanager/img/p/\' + values.creator_id + \'_photo.jpg\']});"></div>',
@@ -165,6 +165,7 @@ Ext.define('LanistaTrainer.view.MainViewport', {
                                                     xtype: 'tabbar',
                                                     border: false,
                                                     cls: 'lanista-tabbar',
+                                                    style: 'background-color: transparent !important',
                                                     plain: true
                                                 }
                                             }

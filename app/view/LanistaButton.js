@@ -85,6 +85,7 @@ Ext.define('LanistaTrainer.view.LanistaButton', {
                 button.menu.hide();
         }, 100);
 
+
     },
 
     onButtonClick: function(button, e, eOpts) {

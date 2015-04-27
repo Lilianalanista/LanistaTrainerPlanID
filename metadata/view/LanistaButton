@@ -102,6 +102,7 @@
                     "    if (button.menu && !button.menu.locked)",
                     "        button.menu.hide();",
                     "}, 100);",
+                    "",
                     ""
                 ],
                 "name": "mouseout",

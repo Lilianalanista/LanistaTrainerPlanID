@@ -345,7 +345,8 @@ $base-gradient: "none";
 
 .menu-lanista-button {
     //text-transform: uppercase;
-    box-shadow: 6px 6px 10px #888888;
+    //box-shadow: 6px 6px 10px #888888;
+    border-color: transparent!important;
 }
 
 .menu-lanista-button .x-menu-item-text{
@@ -788,10 +789,10 @@ $base-gradient: "none";
     -o-transition: all .3s ease-in-out;
     -ms-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
-    filter: blur(10px); 
-    -webkit-filter: blur(10px); 
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
     -moz-filter: blur(10px);
-    -o-filter: blur(10px); 
+    -o-filter: blur(10px);
     -ms-filter: blur(10px);
     filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius=‚10);
 }
@@ -1799,7 +1800,7 @@ $base-gradient: "none";
 }
 
 .x-tab{
-    font: bold 11px/13px tahoma,arial,verdana,sans-serif!important;
+    font: normal 14px/9px tahoma,arial,verdana,sans-serif!important;
     color: #416da3!important;
     max-width: 100%!important;
 }
@@ -1812,3 +1813,54 @@ $base-gradient: "none";
 .lanista-video-window .x-tab.x-tab-active.x-tab-default-top{
     background-image: -webkit-gradient(linear, 50% 100%, 50% 100%, color-stop(0%, #ffffff), color-stop(25%, #f5f9fe), color-stop(45%, #deecfd))!important;
 }
+
+.plan-exercises-panel .x-tab-default-top{
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 0%, color-stop(0%, #ffffff), color-stop(25%, #f5f9fe), color-stop(45%, #deecfd))!important;
+    border-style: none;
+}
+
+.lanista-tabbar .x-tab-default-top span{
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 0%, color-stop(0%, #ffffff), color-stop(25%, #f5f9fe), color-stop(45%, #deecfd))!important;
+    font: normal 14px/9px tahoma,arial,verdana,sans-serif!important;
+    height: 20px;
+}
+
+.lanista-tabbar .x-tab-bar-strip-default{
+    z-index: 10!important;
+}
+
+.lanista-tabbar .x-tab-active, .lanista-tabbar .x-tab-active span{
+    font: bold 14px/9px tahoma,arial,verdana,sans-serif!important;
+    color: dodgerblue!important;
+}
+
+.lanista-menu-float .x-menu-body-default{
+    background: transparent!important;
+}
+
+.lanista-menu-float .x-menu-item a{
+    background-color: white;
+    cursor: pointer;
+    height: 40px!important;
+}
+
+.lanista-menu-float .x-menu-item{
+    //padding-top: 10px!important;
+    cursor: default;
+    height: 50px!important;
+}
+
+.lanista-menu-float .x-menu-item-active{
+    background-image: none!important;
+    background-color: transparent!important;
+    border-color: transparent!important;
+}
+
+.menu-lanista-button .x-menu-item-text{
+    color: #34acfb;
+    font-family: "Avenir LT Std";
+    font-size: 20px;
+    font-weight: normal;
+    padding-top: 10px;
+}
+

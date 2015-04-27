@@ -398,7 +398,7 @@ Ext.define('LanistaTrainer.controller.PlanController', {
 
         this.getRightCommandPanel().add(
             Ext.create('LanistaTrainer.view.LanistaButton', {
-                text: Ext.ux.LanguageManager.TranslationArray.SHARE_PLAN,
+                text: Ext.ux.LanguageManager.TranslationArray.BUTTON_PLAN_OPTIONS,
                 itemId: 'sharePlanButton',
                 menu: controller.setPlanOptions(),
                 menuButtonAlign: 'right',
@@ -654,6 +654,7 @@ Ext.define('LanistaTrainer.controller.PlanController', {
                     height: '50px',
                     width: '220px'
                 },
+                cls:'lanista-menu-float',
                 items:[]
             });
             languages.add(menuItems);
