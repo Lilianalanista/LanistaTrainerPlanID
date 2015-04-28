@@ -197,6 +197,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "cls": "lanista-tabbar",
                         "plain": true
                     },
                     "name": "MyTabBar1",

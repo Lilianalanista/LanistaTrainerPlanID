@@ -465,36 +465,37 @@ Ext.define('LanistaTrainer.controller.PlanController', {
             {
                 defaults: {
                     height: '50px',
-                    width: '220px'
+                    width: '210px'
                 },
+                cls:'lanista-menu-float',
                 items:
                 [
                     {text:  Ext.ux.LanguageManager.TranslationArray.SEND_EMAIL.toUpperCase(),
-                            handler: function () {
-                                        Ext.Msg.prompt (
-                                            Ext.ux.LanguageManager.TranslationArray.SEND_EMAIL,
-                                            Ext.ux.LanguageManager.TranslationArray.MSG_EMAIL_INVALID_2,
-                                            function (response, email_to_send) {
-                                                if (response === 'ok')
-                                                    controller.sendEmail(email_to_send);
-                                                else
-                                                    return;
-                                            },
-                                            null,
-                                            false,
-                                            "",
-                                            {
-                                                autoCapitalize: true,
-                                                //placeHolder: Ext.ux.LanguageManager.TranslationArray.PLAN_NAME_DEFAULT,
-                                                clearicon: true
-                                            }
-                                        );
-                            }
+                     handler: function () {
+                         Ext.Msg.prompt (
+                             Ext.ux.LanguageManager.TranslationArray.SEND_EMAIL,
+                             Ext.ux.LanguageManager.TranslationArray.MSG_EMAIL_INVALID_2,
+                             function (response, email_to_send) {
+                                 if (response === 'ok')
+                                     controller.sendEmail(email_to_send);
+                                 else
+                                     return;
+                             },
+                             null,
+                             false,
+                             "",
+                             {
+                                 autoCapitalize: true,
+                                 //placeHolder: Ext.ux.LanguageManager.TranslationArray.PLAN_NAME_DEFAULT,
+                                 clearicon: true
+                             }
+                         );
+                     }
                     },
                     {text:  Ext.ux.LanguageManager.TranslationArray.GENERATE_PDF.toUpperCase(),
-                            handler: function () {
-                                        controller.generatePdf(controller.plan.data.id);
-                            }
+                     handler: function () {
+                         controller.generatePdf(controller.plan.data.id);
+                     }
                     }
                 ]
             }
@@ -652,7 +653,7 @@ Ext.define('LanistaTrainer.controller.PlanController', {
             {
                 defaults: {
                     height: '50px',
-                    width: '220px'
+                    width: '210px'
                 },
                 cls:'lanista-menu-float',
                 items:[]

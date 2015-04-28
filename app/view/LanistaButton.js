@@ -65,14 +65,6 @@ Ext.define('LanistaTrainer.view.LanistaButton', {
                 component.menu.locked = true;
             });
 
-
-
-            console.log('Boton.........');
-            console.log(component);
-
-
-
-
         }
 
     },

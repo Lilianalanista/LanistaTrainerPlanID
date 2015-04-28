@@ -102,6 +102,7 @@ Ext.define('LanistaTrainer.view.ExercisePanel', {
             ],
             tabBar: {
                 xtype: 'tabbar',
+                cls: 'lanista-tabbar',
                 plain: true
             }
         }

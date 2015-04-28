@@ -1839,7 +1839,9 @@ $base-gradient: "none";
 }
 
 .lanista-menu-float .x-menu-item a{
-    background-color: white;
+    //background-color: rgba(227, 227, 227, 1.801962);
+    background-color: rgba(227, 227, 227, 0.901961);
+    //background-color: white;
     cursor: pointer;
     height: 40px!important;
 }
@@ -1864,3 +1866,27 @@ $base-gradient: "none";
     padding-top: 10px;
 }
 
+.x-tab-bar-strip {
+	border: none;
+	background: none;
+}
+
+#exercisePanelContent .x-panel-header {
+	background: none;
+	border: none;
+	box-shadow: none;
+}
+
+//#exercisePanelContent .x-panel-body {
+//	border: none;
+//}
+
+#exercisePanel .x-panel-body-default{
+    border-color: darkgrey!important;
+}
+
+.lanista-exercise-panel-content .x-tab-default-top{
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 0%, color-stop(0%, #ffffff), color-stop(25%, #f5f9fe), color-stop(45%, #deecfd))!important;
+    border-style: none;
+    cursor: default;
+}
