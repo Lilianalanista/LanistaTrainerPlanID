@@ -7,7 +7,7 @@ Ext.define('Ext.ux.LanguageManager', {
 	
 	constructor: function(config) {
 		this.callParent();
-		console.log ("INITIALIZING LANGUAGE MANAGER...");
+		//console.log ("INITIALIZING LANGUAGE MANAGER...");
 		this.detectLanguage();
  	},
  	
@@ -15,7 +15,7 @@ Ext.define('Ext.ux.LanguageManager', {
  		var self = this;
  		var current_lang = localStorage.getItem('lanista-lang');
  		current_lang = current_lang ? current_lang : 'EN';
- 		console.log ("Setting language to: " + current_lang);
+ 		//console.log ("Setting language to: " + current_lang);
  		self.setLanguage(current_lang);
  		/*
  		$.browserLanguage(function( language , acceptHeader ){
@@ -35,10 +35,10 @@ Ext.define('Ext.ux.LanguageManager', {
  		var head	= document.getElementsByTagName( 'head' )[0];
  		var script	= document.createElement( 'script' );
  		script.setAttribute( "type","text/javascript" );
- 		console.log ("LOADING TRANSLATION FILE");
+ 		//console.log ("LOADING TRANSLATION FILE");
  		script.onreadystatechange = script.onload = function () {
       		self.TranslationArray = Messages;
-      		console.log ("TRANSLATION FILE LOADED");
+      		//console.log ("TRANSLATION FILE LOADED");
     		localStorage.setItem( 'lanista-lang', language );
     		if ( callback instanceof Function ) callback();
     		

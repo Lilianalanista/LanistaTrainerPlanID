@@ -69,7 +69,7 @@ Ext.define('LanistaTrainer.controller.PlanController', {
             params: {id: id, lang: language},
             method: 'post',
             failure : function(result, request){
-                console.log( "Failure form getPlan" );
+                //console.log( "Failure form getPlan" );
             },
             success: function(response, opts) {
                 try {
@@ -101,7 +101,7 @@ Ext.define('LanistaTrainer.controller.PlanController', {
                             params: {id: id},
                             method: 'post',
                             failure : function(result, request){
-                                console.log( "Fehler beim Landen vom TP" );
+                                //console.log( "Fehler beim Landen vom TP" );
                                 LanistaTrainer.app.fireEvent( 'showPlanPanel', plan.data.name );
                             },
                             success: function(response, opts) {
@@ -116,7 +116,8 @@ Ext.define('LanistaTrainer.controller.PlanController', {
                                     plan.data.bu_domain = data.domain;
                                     LanistaTrainer.app.fireEvent( 'showPlanPanel', plan.data.name );
                                 } catch( err ) {
-                                    Ext.Msg.alert('Problem', 'Templatesinformation könnten nicht gelessen werden', Ext.emptyFn);
+                                    //Ext.Msg.alert('Problem', 'Templatesinformation könnten nicht gelessen werden', Ext.emptyFn);
+                                    Ext.Msg.alert(Ext.ux.LanguageManager.TranslationArray.ERROR_TEMPLATE_BU_NOTFOUND_TEXT, Ext.ux.LanguageManager.TranslationArray.ERROR_TEMPLATE_BU_NOTFOUND_HEADER, Ext.emptyFn);
                                 }
                             }
                         });
@@ -126,7 +127,8 @@ Ext.define('LanistaTrainer.controller.PlanController', {
                         LanistaTrainer.app.fireEvent( 'showPlanPanel', plan.data.name );
                 }
                 catch( err ) {
-                    Ext.Msg.alert('Problem', 'Templatesinformation könnten nicht gelessen werden', Ext.emptyFn);
+                    //Ext.Msg.alert('Problem', 'Templatesinformation könnten nicht gelessen werden', Ext.emptyFn);
+                    Ext.Msg.alert(Ext.ux.LanguageManager.TranslationArray.ERROR_TEMPLATE_BU_NOTFOUND_TEXT, Ext.ux.LanguageManager.TranslationArray.ERROR_TEMPLATE_BU_NOTFOUND_HEADER, Ext.emptyFn);
                 }
             }
         });
@@ -430,36 +432,44 @@ Ext.define('LanistaTrainer.controller.PlanController', {
 
     findBUData: function(BUId) {
         Ext.Ajax.request({
-           url: LanistaPhone.util.Config.getServer_address() + LanistaPhone.util.Config.getServer_root_dir() + "plan/getbufromtemplate",
-           params: {id: template.data.id},
-           method: 'post',
-           failure : function(result, request){
-               console.log( "Fehler beim Landen vom TP" );
-           },
-           success: function(response, opts) {
-               try {
-                   var data = Ext.decode(response.responseText);
-                   console.log ("BU");
-                   console.log( data );
-                   if( data.bu > 0 ) {
-                       LanistaPhone.app.bu = data.bu;
-                   } else {
-                       LanistaPhone.app.trainer_id = data.trainer_id;
-                   }
+            url: LanistaPhone.util.Config.getServer_address() + LanistaPhone.util.Config.getServer_root_dir() + "plan/getbufromtemplate",
+            params: {id: template.data.id},
+            method: 'post',
+            failure : function(result, request){
+                //console.log( "Fehler beim Landen vom TP" );
+            },
+            success: function(response, opts) {
+                try {
+                    var data = Ext.decode(response.responseText);
+                    //console.log ("BU");
+                    //console.log( data );
+                    if( data.bu > 0 ) {
+                        LanistaPhone.app.bu = data.bu;
+                    } else {
+                        LanistaPhone.app.trainer_id = data.trainer_id;
+                    }
 
-                   if( callback instanceof Function ) {
-                       callback();
-                   }
-               } catch( err ) {
-                   Ext.Msg.alert('Problem', 'Templatesinformation könnten nicht gelessen werden', Ext.emptyFn);
-               }
-           }
+                    if( callback instanceof Function ) {
+                        callback();
+                    }
+                } catch( err ) {
+                    //Ext.Msg.alert('Problem', 'Templatesinformation könnten nicht gelessen werden', Ext.emptyFn);
+                    Ext.Msg.alert(Ext.ux.LanguageManager.TranslationArray.ERROR_TEMPLATE_BU_NOTFOUND_TEXT, Ext.ux.LanguageManager.TranslationArray.ERROR_TEMPLATE_BU_NOTFOUND_HEADER, Ext.emptyFn);
+                }
+            }
         });
 
     },
 
     setPlanOptions: function() {
-        var controller = this;
+        var controller = this,
+            textEmail;
+
+        textEmail = Ext.ux.LanguageManager.TranslationArray.SEND_EMAIL;
+
+        if (Ext.ux.LanguageManager.lang === 'ES')
+            textEmail = textEmail.substr(0, textEmail.indexOf('electrónico') - 1);
+
 
         planOptions = new Ext.menu.Menu(
             {
@@ -470,7 +480,7 @@ Ext.define('LanistaTrainer.controller.PlanController', {
                 cls:'lanista-menu-float',
                 items:
                 [
-                    {text:  Ext.ux.LanguageManager.TranslationArray.SEND_EMAIL.toUpperCase(),
+                    {text:  textEmail.toUpperCase(),
                      handler: function () {
                          Ext.Msg.prompt (
                              Ext.ux.LanguageManager.TranslationArray.SEND_EMAIL,
@@ -516,7 +526,7 @@ Ext.define('LanistaTrainer.controller.PlanController', {
             failure : function(response){
                 //Ext.Viewport.setMasked( false );
                 data = Ext.decode(response.responseText);
-                console.log ( data );
+                //console.log ( data );
                 Ext.Msg.alert( Ext.ux.LanguageManager.TranslationArray.MSG_PDF_SYNC_ERROR, '', Ext.emptyFn );
             },
             success: function(response, opts) {
@@ -566,7 +576,7 @@ Ext.define('LanistaTrainer.controller.PlanController', {
                                 headers: { user_id: localStorage.getItem("user_id") },
                                 failure : function(response){
                                     data = Ext.decode(response.responseText);
-                                    console.log ( data );
+                                    //console.log ( data );
                                     Ext.Msg.alert( Ext.ux.LanguageManager.TranslationArray.MSG_EMAIL_PROBLEM, '', Ext.emptyFn );
                                 },
                                 success: function(response, opts) {

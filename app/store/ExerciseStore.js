@@ -60,7 +60,7 @@ Ext.define('LanistaTrainer.store.ExerciseStore', {
                                 success = false;
                             }
                         } else {
-                            console.log(operation);
+                            //console.log(operation);
                             for (; i < length; i++) {
                                 id = ids[i];
                                 data = me.getRecord(id);
@@ -81,9 +81,9 @@ Ext.define('LanistaTrainer.store.ExerciseStore', {
                                 collection.sort(sorters);
                             }
 
-                            console.log(me.totalCount);
-                            console.log(operation.start);
-                            console.log(operation.limit);
+                            //console.log(me.totalCount);
+                            //console.log(operation.start);
+                            //console.log(operation.limit);
                             records = collection.items.slice(operation.start, operation.start + operation.limit);
 
                         }

@@ -24673,30 +24673,35 @@ div.x-form-text-grow .x-form-textarea {
 .menu-lanista-button .x-menu-item-text {
   color: #34acfb;
   font-family: "Avenir LT Std";
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   padding-top: 10px;
 }
 
 /* line 1869, /Users/lilianadiaz/Sites/LanistaTrainerPlanID/build/temp/testing/LanistaTrainer/sass/../../../../../packages/ext-theme-classic-7538954c-c46d-42b1-8a29-f2ce5d434f42/sass/src/Component.scss */
+.menu-lanista-button .x-menu-item-text-default.x-menu-item-indent {
+  margin-left: 11px!important;
+}
+
+/* line 1873, /Users/lilianadiaz/Sites/LanistaTrainerPlanID/build/temp/testing/LanistaTrainer/sass/../../../../../packages/ext-theme-classic-7538954c-c46d-42b1-8a29-f2ce5d434f42/sass/src/Component.scss */
 .x-tab-bar-strip {
   border: none;
   background: none;
 }
 
-/* line 1874, /Users/lilianadiaz/Sites/LanistaTrainerPlanID/build/temp/testing/LanistaTrainer/sass/../../../../../packages/ext-theme-classic-7538954c-c46d-42b1-8a29-f2ce5d434f42/sass/src/Component.scss */
+/* line 1878, /Users/lilianadiaz/Sites/LanistaTrainerPlanID/build/temp/testing/LanistaTrainer/sass/../../../../../packages/ext-theme-classic-7538954c-c46d-42b1-8a29-f2ce5d434f42/sass/src/Component.scss */
 #exercisePanelContent .x-panel-header {
   background: none;
   border: none;
   box-shadow: none;
 }
 
-/* line 1884, /Users/lilianadiaz/Sites/LanistaTrainerPlanID/build/temp/testing/LanistaTrainer/sass/../../../../../packages/ext-theme-classic-7538954c-c46d-42b1-8a29-f2ce5d434f42/sass/src/Component.scss */
+/* line 1888, /Users/lilianadiaz/Sites/LanistaTrainerPlanID/build/temp/testing/LanistaTrainer/sass/../../../../../packages/ext-theme-classic-7538954c-c46d-42b1-8a29-f2ce5d434f42/sass/src/Component.scss */
 #exercisePanel .x-panel-body-default {
   border-color: darkgrey!important;
 }
 
-/* line 1888, /Users/lilianadiaz/Sites/LanistaTrainerPlanID/build/temp/testing/LanistaTrainer/sass/../../../../../packages/ext-theme-classic-7538954c-c46d-42b1-8a29-f2ce5d434f42/sass/src/Component.scss */
+/* line 1892, /Users/lilianadiaz/Sites/LanistaTrainerPlanID/build/temp/testing/LanistaTrainer/sass/../../../../../packages/ext-theme-classic-7538954c-c46d-42b1-8a29-f2ce5d434f42/sass/src/Component.scss */
 .lanista-exercise-panel-content .x-tab-default-top {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 0%, color-stop(0%, white), color-stop(25%, #f5f9fe), color-stop(45%, #deecfd)) !important;
   border-style: none;

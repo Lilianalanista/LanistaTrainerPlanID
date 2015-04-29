@@ -1861,9 +1861,13 @@ $base-gradient: "none";
 .menu-lanista-button .x-menu-item-text{
     color: #34acfb;
     font-family: "Avenir LT Std";
-    font-size: 20px;
+    font-size: 18px;
     font-weight: normal;
     padding-top: 10px;
+}
+
+.menu-lanista-button .x-menu-item-text-default.x-menu-item-indent{
+    margin-left: 11px!important;
 }
 
 .x-tab-bar-strip {

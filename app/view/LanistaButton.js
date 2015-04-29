@@ -74,7 +74,7 @@ Ext.define('LanistaTrainer.view.LanistaButton', {
         setTimeout(function()
         {
             if (button.menu && !button.menu.locked)
-                button.menu.hide();
+               button.menu.hide();
         }, 100);
 
 
