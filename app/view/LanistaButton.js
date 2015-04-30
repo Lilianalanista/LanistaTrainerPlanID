@@ -72,10 +72,10 @@ Ext.define('LanistaTrainer.view.LanistaButton', {
     onButtonMouseOut: function(button, e, eOpts) {
 
         setTimeout(function()
-        {
-            if (button.menu && !button.menu.locked)
-               button.menu.hide();
-        }, 100);
+                   {
+                       if (button.menu && !button.menu.locked)
+                           button.menu.hide();
+                   }, 100);
 
 
     },

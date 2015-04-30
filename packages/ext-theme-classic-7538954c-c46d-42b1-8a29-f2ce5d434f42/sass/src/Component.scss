@@ -1815,12 +1815,18 @@ $base-gradient: "none";
 }
 
 .plan-exercises-panel .x-tab-default-top{
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 0%, color-stop(0%, #ffffff), color-stop(25%, #f5f9fe), color-stop(45%, #deecfd))!important;
+    background-image: -webkit-gradient(linear, 1% 0%, 0% 0%, color-stop(0%, #ffffff), color-stop(25%, #f5f9fe), color-stop(45%, #deecfd))!important;
+    background: -moz-linear-gradient(left, #FFF, #FFF);
     border-style: none;
 }
 
+.plan-exercises-panel .x-tab.x-tab-active.x-tab-default-top{
+    background-image: -moz-linear-gradient(center top , #FFF, #FFF 25%, #FFF 45%)!important;
+}
+
 .lanista-tabbar .x-tab-default-top span{
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 0%, color-stop(0%, #ffffff), color-stop(25%, #f5f9fe), color-stop(45%, #deecfd))!important;
+    background-image: -webkit-gradient(linear, 1% 0%, 0% 0%, color-stop(0%, #ffffff), color-stop(25%, #f5f9fe), color-stop(45%, #deecfd))!important;
+    background: -moz-linear-gradient(left, #FFF, #FFF);
     font: normal 14px/9px tahoma,arial,verdana,sans-serif!important;
     height: 20px;
 }
@@ -1871,14 +1877,14 @@ $base-gradient: "none";
 }
 
 .x-tab-bar-strip {
-	border: none;
-	background: none;
+    border: none;
+    background: none;
 }
 
 #exercisePanelContent .x-panel-header {
-	background: none;
-	border: none;
-	box-shadow: none;
+    background: none;
+    border: none;
+    box-shadow: none;
 }
 
 //#exercisePanelContent .x-panel-body {
@@ -1890,7 +1896,9 @@ $base-gradient: "none";
 }
 
 .lanista-exercise-panel-content .x-tab-default-top{
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 0%, color-stop(0%, #ffffff), color-stop(25%, #f5f9fe), color-stop(45%, #deecfd))!important;
+    background-image: -webkit-gradient(linear, 1% 0%, 0% 0%, color-stop(0%, #ffffff), color-stop(25%, #f5f9fe), color-stop(45%, #deecfd))!important;
+    //background: -moz-linear-gradient(left, #FFF, #FFF);
+    background-image: -moz-linear-gradient(center top , #FFF, #FFF 25%, #FFF 45%)!important;
     border-style: none;
     cursor: default;
 }

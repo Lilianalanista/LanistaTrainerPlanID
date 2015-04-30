@@ -90,10 +90,10 @@
                 "implHandler": [
                     "",
                     "setTimeout(function()",
-                    "{",
-                    "    if (button.menu && !button.menu.locked)",
-                    "       button.menu.hide();",
-                    "}, 100);",
+                    "           {",
+                    "               if (button.menu && !button.menu.locked)",
+                    "                   button.menu.hide();",
+                    "           }, 100);",
                     "",
                     ""
                 ],

@@ -252,6 +252,7 @@ Ext.define('LanistaTrainer.view.MainViewport', {
     onExercicesPanelAfterRender: function(component, eOpts) {
         setTimeout(function() {
                 component.getTabBar().items.items[0].el.setHtml(Ext.ux.LanguageManager.TranslationArray.DAY + ' 1');
+                component.updateLayout();
         },1000);
 
 
