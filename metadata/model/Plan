@@ -218,6 +218,19 @@
             },
             "name": "MyString11",
             "designerId": "45f5cde2-56ef-4190-ab44-f045f4c6d152"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "creator_website"
+            },
+            "name": "MyString12",
+            "designerId": "951833df-0a13-4ba6-8bb0-d299394142b5"
         }
     ]
 }

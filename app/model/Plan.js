@@ -86,6 +86,10 @@ Ext.define('LanistaTrainer.model.Plan', {
         {
             type: 'string',
             name: 'bu_domain'
+        },
+        {
+            type: 'string',
+            name: 'creator_website'
         }
     ]
 });

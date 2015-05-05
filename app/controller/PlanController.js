@@ -89,7 +89,8 @@ Ext.define('LanistaTrainer.controller.PlanController', {
                         creator_id: data.plan.creator_id,
                         bu_name: "",
                         bu_email: "",
-                        bu_domain: ""
+                        bu_domain: "",
+                        creator_website: data.plan.creator_website
                     });
                     controller.plan = plan;
                     controller.exercises = data.plan.exercises;

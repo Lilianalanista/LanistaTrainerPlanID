@@ -120,8 +120,8 @@ Ext.define('LanistaTrainer.view.MainViewport', {
                                                 id: 'planHeader',
                                                 itemId: 'planHeader',
                                                 margin: '100 0 0 0',
-                                                tpl: [
-                                                    '<div class="plan-header-description" id="planHeaderDescription">{description}</div>',
+                                                tpl: Ext.create('Ext.XTemplate', 
+                                                    '<div class="plan-header-description" id="planHeaderDescription">{[this.strLines(values.description)]}</div>',
                                                     '<div class="plan-header-info" id="planHeaderInfoBu">',
                                                     '    <div class="plan-createddate-info">',
                                                     '        <div class="plan-header-attribute">{[Ext.ux.LanguageManager.TranslationArray.CREATED_AT]}:</div><div class="plan-header-value">{[Ext.Date.format ( values.creation_date, \'d, M Y\' )]}</div>',
@@ -131,9 +131,34 @@ Ext.define('LanistaTrainer.view.MainViewport', {
                                                     '    </div>',
                                                     '    <div class="dashboard-customer-background" style="customer-image">a</div>',
                                                     '    <div class="plan-header-customer-info" style="background-image: url({[ values.bu_name !== "" ? \'http://lanista-training.com/app/\' + values.bu_domain + \'/logo.png\' :  Ext.ux.ConfigManager.getServer() + Ext.ux.ConfigManager.getRoot() + \'/tpmanager/img/p/\' + values.creator_id + \'_photo.jpg\']});"></div>',
-                                                    '    <div class="plan-header-email">{[values.bu_email !== "" ? values.bu_email : ""]}</div>',
-                                                    '</div>'
-                                                ]
+                                                    '    <div class="plan-header-email"><a href="{[ values.bu_domain === \'\' ? (values.creator_website !== \'\' ? (values.creator_website.indexOf(\'http://\') > 0 ? values.creator_website : \'http://\' + values.creator_website) : \'\') : (values.bu_email !== \'\' ? (values.bu_email.indexOf(\'http://\') > 0 ? values.bu_email : \'http://\' + values.bu_email) : \'\')]}" target="_blank"> {[values.bu_domain === \'\' ? (values.creator_website !== "" ? values.creator_website : "") : (values.bu_email !== "" ? values.bu_email : "")]} </a></div>',
+                                                    '</div>',
+                                                    {
+                                                        strLines: function(value) {
+                                                            var returnValue = '',
+                                                                strSplit = [];
+
+                                                            try{
+                                                                if(value.indexOf("\n") !== -1)
+                                                                returnValue = value.split( "\n" ).join( "<br>" );
+                                                                else
+                                                                returnValue = value.split( "||" ).join( "<br>" );
+                                                            }
+                                                            catch(e){
+                                                                for (var i = 0; i < value.length; i++){
+                                                                    strSplit = value[i].split(",");
+                                                                    for (var j = 0; j < strSplit.length; j++) {
+                                                                        returnValue = returnValue + strSplit[j].trim().substr(0,1).toUpperCase() + strSplit[j].trim().substr(1) + '<br>';
+                                                                    }
+                                                                    strSplit = [];
+                                                                }
+                                                            }
+
+                                                            return returnValue;
+
+                                                        }
+                                                    }
+                                                )
                                             },
                                             {
                                                 xtype: 'tabpanel',
