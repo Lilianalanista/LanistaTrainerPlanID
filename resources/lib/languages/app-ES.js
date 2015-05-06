@@ -591,6 +591,7 @@ OFFLINE_1: 'Error de conexión',
 OFFLINE_2: 'Los datos de tu cliente podrían estar incompletos',
 MEASURE_ALREADY_EXIST: 'Una medición para el día seleccionado ya existe y ha sido cargada',
 ERROR_TEMPLATE_BU_NOTFOUND_HEADER: 'La rutina de entrenamiento no esta disponible',
-ERROR_TEMPLATE_BU_NOTFOUND_TEXT: 'Por favor contacted a nuestro personal'
+ERROR_TEMPLATE_BU_NOTFOUND_TEXT: 'Por favor contacted a nuestro personal',
+REGISTRATION_FEATURES: '100 rutinas de entrenamiento y mas de 1000 ejercicios esperan por ti.<br>Gratis !'
 };
 

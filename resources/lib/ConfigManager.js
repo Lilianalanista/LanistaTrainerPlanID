@@ -1,8 +1,8 @@
 Ext.define('Ext.ux.ConfigManager', {
 	singleton:  		true,
-	root:				'',
-	server:				'',
-    appname:            'http://lanista-training.com/desktop',
+	root:				'/~lilianadiaz',
+	server:				'http://localhost',
+    appname:            '/LanistaTrainerBrowser2.0_LinkPlanId',
 	
 	constructor: function(config) {
 		this.callParent();
