@@ -32999,3 +32999,41 @@ tr.x-grid-subtable-row {
   border-style: none;
   cursor: default;
 }
+
+/* line 1909, /Users/lilianadiaz/Sites/LanistaTrainerPlanID/build/temp/testing/LanistaTrainer/slicer-temp/../../../../../packages/ext-theme-classic-7538954c-c46d-42b1-8a29-f2ce5d434f42/sass/src/Component.scss */
+.lanista-form-register .x-window-item {
+  height: 130px!important;
+}
+
+/* line 1913, /Users/lilianadiaz/Sites/LanistaTrainerPlanID/build/temp/testing/LanistaTrainer/slicer-temp/../../../../../packages/ext-theme-classic-7538954c-c46d-42b1-8a29-f2ce5d434f42/sass/src/Component.scss */
+.lanista-form-register .x-window-header-title-default {
+  color: white!important;
+  font-size: 14px!important;
+}
+
+/* line 1919, /Users/lilianadiaz/Sites/LanistaTrainerPlanID/build/temp/testing/LanistaTrainer/slicer-temp/../../../../../packages/ext-theme-classic-7538954c-c46d-42b1-8a29-f2ce5d434f42/sass/src/Component.scss */
+.lanista-form-register .x-form-display-field-default {
+  color: rgba(190, 224, 247, 0.902);
+  display: block;
+  font-family: RobotoLight;
+  font-size: 25.24px;
+  font-weight: normal;
+  text-align: center;
+  line-height: 1;
+  height: 100px;
+}
+
+/* line 1930, /Users/lilianadiaz/Sites/LanistaTrainerPlanID/build/temp/testing/LanistaTrainer/slicer-temp/../../../../../packages/ext-theme-classic-7538954c-c46d-42b1-8a29-f2ce5d434f42/sass/src/Component.scss */
+.lanista-form-register {
+  background: black!important;
+}
+
+/* line 1934, /Users/lilianadiaz/Sites/LanistaTrainerPlanID/build/temp/testing/LanistaTrainer/slicer-temp/../../../../../packages/ext-theme-classic-7538954c-c46d-42b1-8a29-f2ce5d434f42/sass/src/Component.scss */
+.lanista-form-register .x-window-body .x-box-inner {
+  background: black!important;
+}
+
+/* line 1939, /Users/lilianadiaz/Sites/LanistaTrainerPlanID/build/temp/testing/LanistaTrainer/slicer-temp/../../../../../packages/ext-theme-classic-7538954c-c46d-42b1-8a29-f2ce5d434f42/sass/src/Component.scss */
+.lanista-form-register .x-window-header-default-top {
+  background: black!important;
+}
