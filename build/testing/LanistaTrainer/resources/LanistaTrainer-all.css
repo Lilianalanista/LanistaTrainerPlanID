@@ -23889,30 +23889,16 @@ div.x-form-text-grow .x-form-textarea {
   font-family: 'Roboto Light';
 }
 
-/* line 1169, /Users/lilianadiaz/Sites/LanistaTrainerPlanID/build/temp/testing/LanistaTrainer/sass/../../../../../packages/ext-theme-classic-7538954c-c46d-42b1-8a29-f2ce5d434f42/sass/src/Component.scss */
-.plan-header-attribute {
-  width: 50%;
-  float: left;
-}
-
-/* line 1174, /Users/lilianadiaz/Sites/LanistaTrainerPlanID/build/temp/testing/LanistaTrainer/sass/../../../../../packages/ext-theme-classic-7538954c-c46d-42b1-8a29-f2ce5d434f42/sass/src/Component.scss */
-.plan-header-value {
-  float: right;
-  width: 50%;
-  text-align: right;
-  font-family: 'Roboto Medium';
-}
-
 /* line 1181, /Users/lilianadiaz/Sites/LanistaTrainerPlanID/build/temp/testing/LanistaTrainer/sass/../../../../../packages/ext-theme-classic-7538954c-c46d-42b1-8a29-f2ce5d434f42/sass/src/Component.scss */
 .plan-header-attribute {
-  width: 50%;
+  width: 40%!important;
   float: left;
 }
 
 /* line 1186, /Users/lilianadiaz/Sites/LanistaTrainerPlanID/build/temp/testing/LanistaTrainer/sass/../../../../../packages/ext-theme-classic-7538954c-c46d-42b1-8a29-f2ce5d434f42/sass/src/Component.scss */
 .plan-header-value {
   float: right;
-  width: 50%;
+  width: 60%!important;
   text-align: right;
   font-family: 'Roboto Medium';
 }
@@ -24733,9 +24719,9 @@ div.x-form-text-grow .x-form-textarea {
 .lanista-form-register .x-form-display-field-default {
   color: rgba(190, 224, 247, 0.902);
   display: block;
-  font-family: RobotoLight;
-  font-size: 25.24px;
-  font-weight: normal;
+  font-family: Roboto Light;
+  font-size: 22.24px;
+  font-weight: bold;
   text-align: center;
   line-height: 1;
   height: 100px;
@@ -24754,4 +24740,10 @@ div.x-form-text-grow .x-form-textarea {
 /* line 1939, /Users/lilianadiaz/Sites/LanistaTrainerPlanID/build/temp/testing/LanistaTrainer/sass/../../../../../packages/ext-theme-classic-7538954c-c46d-42b1-8a29-f2ce5d434f42/sass/src/Component.scss */
 .lanista-form-register .x-window-header-default-top {
   background: black!important;
+}
+
+/* line 1943, /Users/lilianadiaz/Sites/LanistaTrainerPlanID/build/temp/testing/LanistaTrainer/sass/../../../../../packages/ext-theme-classic-7538954c-c46d-42b1-8a29-f2ce5d434f42/sass/src/Component.scss */
+.plan-header-email a {
+  color: #4aacd8;
+  text-decoration: none;
 }

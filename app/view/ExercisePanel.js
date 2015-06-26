@@ -71,21 +71,39 @@ Ext.define('LanistaTrainer.view.ExercisePanel', {
                     id: 'info',
                     tpl: Ext.create('Ext.XTemplate', 
                         '<div class="exercise-description">',
-                        '    <div class="exercise-coaching-key"><span><b>{[Ext.ux.LanguageManager.TranslationArray.EXECUTION]}</b></span><br>{[Ext.ux.LanguageManager.lang === "EN" ? values.coatchingnotes_EN : Ext.ux.LanguageManager.lang === "ES" ? this.strLines(values.coatchingnotes_ES) :  values.coatchingnotes_DE]}</div>',
-                        '    <div class="exercise-errors"><span><b>{[Ext.ux.LanguageManager.TranslationArray.POSSIBLE_ERRORS]}</b></span><br>{[values["mistakes_"+Ext.ux.LanguageManager.lang]]}</div>',
+                        '    <div class="exercise-coaching-key"><span><b>{[Ext.ux.LanguageManager.TranslationArray.EXECUTION]}</b></span><br>{[Ext.ux.LanguageManager.lang === "EN" ? this.strLines(values.coatchingnotes_EN) : Ext.ux.LanguageManager.lang === "ES" ? this.strLines(values.coatchingnotes_ES) :  this.strLines(values.coatchingnotes_DE)]}</div>',
+                        '    <div class="exercise-errors"><span><b>{[Ext.ux.LanguageManager.TranslationArray.POSSIBLE_ERRORS]}</b></span><br>{[this.strLines(values["mistakes_"+Ext.ux.LanguageManager.lang])]}</div>',
                         '</div>',
                         {
                             strLines: function(value) {
                                 var returnValue = '',
                                     strSplit = [];
+                                strSplitII = [];
 
-                                for (var i = 0; i < value.length; i++){
-                                    strSplit = value[i].split(",");
-                                    for (var j = 0; j < strSplit.length; j++) {
-                                        returnValue = returnValue + strSplit[j].trim().substr(0,1).toUpperCase() + strSplit[j].trim().substr(1) + '<br>';
+                                if (Ext.isArray(value)){
+                                    for (var i = 0; i < value.length; i++){
+                                        strSplit = value[i].split(",");
+                                        for (var j = 0; j < strSplit.length; j++) {
+                                            strSplitII = strSplit[j].split("||");
+                                            for (var k = 0; k < strSplitII.length; k++) {
+                                                returnValue = returnValue + strSplitII[k].trim().substr(0,1).toUpperCase() + strSplitII[k].trim().substr(1) + '<br>';
+                                            }
+                                            strSplitII = [];
+                                        }
+                                        strSplit = [];
                                     }
-                                    strSplit = [];
                                 }
+                                else{
+                                    strSplit = value.split(",");
+                                    for (var j = 0; j < strSplit.length; j++) {
+                                        strSplitII = strSplit[j].split("||");
+                                        for (var k = 0; k < strSplitII.length; k++) {
+                                            returnValue = returnValue + strSplitII[k].trim().substr(0,1).toUpperCase() + strSplitII[k].trim().substr(1) + '<br>';
+                                        }
+                                        strSplitII = [];
+                                    }
+                                }
+
                                 return returnValue;
                             }
                         }

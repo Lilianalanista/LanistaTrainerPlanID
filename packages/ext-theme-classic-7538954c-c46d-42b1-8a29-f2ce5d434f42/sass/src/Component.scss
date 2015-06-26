@@ -1166,26 +1166,26 @@ $base-gradient: "none";
     font-family: 'Roboto Light';
 }
 
+//.plan-header-attribute {
+//    width: 50%;
+//    float: left;
+//}
+
+//.plan-header-value {
+//    float: right;
+//    width: 60%;
+//    text-align: right;
+//    font-family: 'Roboto Medium';
+//}
+
 .plan-header-attribute {
-    width: 50%;
+    width: 40%!important;
     float: left;
 }
 
 .plan-header-value {
     float: right;
-    width: 50%;
-    text-align: right;
-    font-family: 'Roboto Medium';
-}
-
-.plan-header-attribute {
-    width: 50%;
-    float: left;
-}
-
-.plan-header-value {
-    float: right;
-    width: 50%;
+    width: 60%!important;
     text-align: right;
     font-family: 'Roboto Medium';
 }
@@ -1919,9 +1919,9 @@ $base-gradient: "none";
 .lanista-form-register .x-form-display-field-default{
     color: rgba(190, 224, 247, 0.901961);
     display: block;
-    font-family: RobotoLight;
-    font-size: 25.24px;
-    font-weight: normal;
+    font-family: Roboto Light;
+    font-size: 22.24px;
+    font-weight: bold;
     text-align: center;
     line-height: 1;
     height: 100px;
@@ -1938,4 +1938,9 @@ $base-gradient: "none";
 
 .lanista-form-register .x-window-header-default-top{
     background: black!important;
+}
+
+.plan-header-email a {
+    color: #4aacd8;
+    text-decoration: none;
 }
